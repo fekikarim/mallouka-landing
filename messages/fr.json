@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "title": "Mallouka Motors | Allo Casse Auto | Moteurs Importés et Pièces Automobiles en Tunisie",
+    "description": "Spécialistes Automobiles de Confiance Depuis 2003. Mallouka Motors (anciennement Allo Casse Auto) propose des moteurs importés, boîtes de vitesses, pièces de rechange et services d'atelier mécanique professionnels en Tunisie.",
+    "keywords": "Mallouka Motors, Allo Casse Auto, Moteurs Importés Tunisie, Moteurs d'Occasion Tunisie, Pièces Automobiles Tunisie, Atelier Mécanique Tunisie"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "brands": "Marques",
+    "contact": "Contact",
+    "language": "Langue"
+  },
+  "hero": {
+    "title": "Mallouka Motors",
+    "tagline": "Connu depuis des années comme Allo Casse Auto",
+    "subtitle": "Spécialistes Automobiles de Confiance Depuis 2003",
+    "contactBtn": "Contactez-nous",
+    "whatsappBtn": "WhatsApp"
+  },
+  "brands": {
+    "title": "Marques de Confiance",
+    "subtitle": "Nous travaillons avec les principales marques automobiles mondiales"
+  },
+  "stats": {
+    "title": "Nos Réalisations",
+    "years": "Années d'Expérience",
+    "engines": "Moteurs Importés",
+    "customers": "Clients Satisfaits",
+    "countries": "Pays Desservis"
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "subtitle": "Votre Partenaire Automobile de Confiance",
+    "description": "Mallouka Motors, anciennement connu sous le nom d'Allo Casse Auto, sert les besoins automobiles de la Tunisie depuis 2003. Nous nous spécialisons dans l'importation de moteurs, boîtes de vitesses et pièces de rechange de haute qualité depuis l'Europe.",
+    "mission": "Notre Mission",
+    "missionText": "Fournir des pièces et services automobiles premium avec une qualité et un service client inégalés.",
+    "vision": "Notre Vision",
+    "visionText": "Devenir le premier fournisseur tunisien de pièces automobiles importées et services mécaniques.",
+    "values": "Nos Valeurs",
+    "quality": "Qualité",
+    "integrity": "Intégrité",
+    "reliability": "Fiabilité"
+  },
+  "timeline": {
+    "title": "Notre Histoire",
+    "subtitle": "Un Parcours d'Excellence",
+    "2003": {
+      "title": "Marsa Casse",
+      "description": "Fondé sous le nom de Marsa Casse, débutant notre parcours dans les services automobiles."
+    },
+    "2012": {
+      "title": "Allo Casse Auto",
+      "description": "Rebaptisé Allo Casse Auto, élargissant nos services et notre portée."
+    },
+    "2020": {
+      "title": "Mallouka Motors",
+      "description": "Évolué en Mallouka Motors, offrant des solutions automobiles complètes."
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions Automobiles Complètes",
+    "engines": "Moteurs Importés",
+    "enginesDesc": "Moteurs de haute qualité provenant d'Europe",
+    "gearboxes": "Boîtes de Vitesses",
+    "gearboxesDesc": "Systèmes de transmission fiables pour tous types de véhicules",
+    "spareParts": "Pièces de Rechange",
+    "sparePartsDesc": "Pièces automobiles authentiques",
+    "installation": "Installation de Moteur",
+    "installationDesc": "Services professionnels d'installation de moteur",
+    "diagnostics": "Diagnostics",
+    "diagnosticsDesc": "Diagnostics avancés de véhicules",
+    "maintenance": "Maintenance",
+    "maintenanceDesc": "Maintenance et réparations régulières"
+  },
+  "process": {
+    "title": "Processus d'Importation de Moteurs",
+    "subtitle": "Comment Nous Sourçons des Moteurs de Qualité",
+    "step1": "Approvisionnement",
+    "step1Desc": "Nous sourçons des moteurs de France, Belgique, Allemagne, Italie et Espagne",
+    "step2": "Contrôle Qualité",
+    "step2Desc": "Chaque moteur subit une inspection qualité rigoureuse",
+    "step3": "Expédition",
+    "step3Desc": "Expédition sécurisée vers la Tunisie avec documentation appropriée",
+    "step4": "Installation",
+    "step4Desc": "Installation professionnelle par notre équipe d'experts",
+    "customRequest": "Besoin d'une Demande Personnalisée?",
+    "contactUs": "Contactez-nous"
+  },
+  "whyChoose": {
+    "title": "Pourquoi Nous Choisir",
+    "subtitle": "L'Avantage Mallouka Motors",
+    "quality": "Qualité Premium",
+    "qualityDesc": "Seulement les meilleures pièces de sources européennes de confiance",
+    "experience": "23+ Années d'Expérience",
+    "experienceDesc": "Décennies d'expertise dans les services automobiles",
+    "warranty": "Garantie Incluse",
+    "warrantyDesc": "Sérénité d'esprit avec notre couverture de garantie",
+    "support": "Support Expert",
+    "supportDesc": "Équipe compétente prête à vous aider",
+    "pricing": "Prix Compétitifs",
+    "pricingDesc": "Prix équitables sans compromis sur la qualité",
+    "fast": "Livraison Rapide",
+    "fastDesc": "Traitement rapide sur toutes les commandes",
+    "genuine": "Pièces Authentiques",
+    "genuineDesc": "Pièces authentiques des fabricants d'origine",
+    "service": "Service Excellent",
+    "serviceDesc": "La satisfaction client est notre priorité"
+  },
+  "workshop": {
+    "title": "Atelier Mécanique",
+    "subtitle": "Branche 2 - Services Professionnels",
+    "description": "Notre deuxième branche offre des services complets d'atelier mécanique avec un équipement de pointe et des techniciens expérimentés.",
+    "services": "Services de l'Atelier",
+    "address": "Adresse",
+    "addressValue": "Rue Jaber Ibn Hayen, Tunis 2070",
+    "phone": "Téléphone",
+    "phoneValue": "+216 24 270 888"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Nos Installations et Notre Travail",
+    "exterior": "Vue Extérieure",
+    "interior": "Vue Intérieure",
+    "office": "Porte du Bureau",
+    "outdoor": "Zone Extérieure",
+    "video": "Visite Intérieure"
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "subtitle": "Approuvé par des Milliers",
+    "customer1": "Service excellent et pièces de qualité. Hautement recommandé!",
+    "customer2": "Équipe professionnelle avec une grande expertise. M'a fait gagner du temps et de l'argent.",
+    "customer3": "Meilleur endroit pour les moteurs importés en Tunisie. Très fiable.",
+    "customer4": "Service client exceptionnel et livraison rapide."
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "subtitle": "Questions Courantes sur Nos Services",
+    "q1": "Quels types de moteurs importez-vous?",
+    "a1": "Nous importons divers types de moteurs y compris les moteurs essence, diesel et hybrides de sources européennes réputées.",
+    "q2": "Offrez-vous des services d'installation?",
+    "a2": "Oui, nous fournissons des services professionnels d'installation de moteur dans notre atelier mécanique.",
+    "q3": "Quelle est votre politique de garantie?",
+    "a3": "Nous offrons une couverture de garantie sur nos moteurs et pièces. Contactez-nous pour les termes spécifiques.",
+    "q4": "Combien de temps prend l'expédition?",
+    "a4": "Les délais d'expédition varient selon le pays d'origine et la disponibilité. Nous fournissons des délais de livraison estimés pour chaque commande.",
+    "q5": "Expédiez-vous vers d'autres pays?",
+    "a5": "Oui, nous servons plusieurs pays. Contactez-nous pour vérifier si nous expédions vers votre localisation."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Entrer en Contact",
+    "name": "Nom",
+    "email": "Email",
+    "phone": "Téléphone",
+    "message": "Message",
+    "send": "Envoyer le Message",
+    "branch1": "Branche 1",
+    "branch2": "Branche 2",
+    "whatsapp": "WhatsApp",
+    "emailLabel": "Email"
+  },
+  "footer": {
+    "about": "À Propos de Mallouka Motors",
+    "aboutText": "Spécialistes automobiles de confiance depuis 2003. Votre partenaire pour des moteurs, boîtes de vitesses et pièces de rechange de qualité.",
+    "quickLinks": "Liens Rapides",
+    "contact": "Contact",
+    "followUs": "Suivez-nous",
+    "rights": "Tous droits réservés."
+  }
+}
