@@ -2,25 +2,25 @@ export const statisticsData = [
   {
     id: 1,
     value: 23,
-    label: "Years Experience",
+    label: "years",
     suffix: "+",
   },
   {
     id: 2,
     value: 200,
-    label: "Imported Engines",
+    label: "engines",
     suffix: "+",
   },
   {
     id: 3,
     value: 5000,
-    label: "Happy Customers",
+    label: "customers",
     suffix: "+",
   },
   {
     id: 4,
     value: 10,
-    label: "Countries Served",
+    label: "countries",
     suffix: "+",
   },
 ];

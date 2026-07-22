@@ -23,7 +23,7 @@ export const Maps = () => {
           <ScrollReveal>
             <div className="rounded-2xl overflow-hidden shadow-soft">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.5!2d10.3!3d36.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDU0JzAwLjAiTiAxMMKwMTgnMDAuMCJF!5e0!3m2!1sen!2stn!4v1600000000000!5m2!1sen!2stn"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11613.589924733538!2d10.29569869385474!3d36.87381151316347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2b5c51ab7fc99%3A0xb4e49c021f204324!2sAllo%20Casse%20Auto!5e0!3m2!1sen!2stn!4v1784739724586!5m2!1sen!2stn"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
@@ -42,7 +42,7 @@ export const Maps = () => {
           <ScrollReveal delay={0.2}>
             <div className="rounded-2xl overflow-hidden shadow-soft">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.5!2d10.2!3d36.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDQ4JzAwLjAiTiAxMMKwMTInMDAuMCJF!5e0!3m2!1sen!2stn!4v1600000000000!5m2!1sen!2stn"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11613.589924733538!2d10.29569869385474!3d36.87381151316347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2b5005c1ee90f%3A0x1c69edfea2c1ec9e!2sAllo%20Casse%20Auto%20-%20Montage%20Moteur%20%26%20Entretien!5e0!3m2!1sen!2stn!4v1784739760422!5m2!1sen!2stn"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
