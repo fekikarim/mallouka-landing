@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, Globe } from "lucide-react";
@@ -11,13 +11,28 @@ export const Navbar = () => {
   const t = useTranslations("nav");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
 
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = () => setIsLangMenuOpen(false);
+    if (isLangMenuOpen) {
+      document.addEventListener("click", handleClickOutside);
+      return () => document.removeEventListener("click", handleClickOutside);
+    }
+  }, [isLangMenuOpen]);
+
   const locales = [
-    { code: "en", name: "English", flag: "🇬🇧" },
-    { code: "fr", name: "Français", flag: "🇫🇷" },
-    { code: "ar", name: "العربية", flag: "🇹🇳" },
+    { code: "en", name: "English", flag: "GB" },
+    { code: "fr", name: "Français", flag: "FR" },
+    { code: "ar", name: "العربية", flag: "TN" },
   ];
 
   const currentLocale = pathname.split("/")[1] || "en";
@@ -26,6 +41,7 @@ export const Navbar = () => {
     const newPath = pathname.replace(`/${currentLocale}`, `/${locale}`);
     router.push(newPath);
     setIsLangMenuOpen(false);
+    setIsMobileMenuOpen(false);
   };
 
   const navItems = [
@@ -37,7 +53,13 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-all duration-300">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-slate-950/95 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+          : "bg-slate-950/60 backdrop-blur-md border-b border-white/5"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -73,25 +95,36 @@ export const Navbar = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsLangMenuOpen(!isLangMenuOpen);
+                }}
                 className="flex items-center space-x-2 text-slate-300 hover:text-white hover:bg-slate-800/50"
               >
                 <Globe className="w-5 h-5 text-primary-400 drop-shadow-[0_0_5px_rgba(59,130,246,0.5)]" />
-                <span className="hidden sm:inline">
-                  {locales.find((l) => l.code === currentLocale)?.flag}
+                <span className="hidden sm:inline text-xs font-bold tracking-wider">
+                  {currentLocale.toUpperCase()}
                 </span>
               </Button>
 
               {isLangMenuOpen && (
-                <div className="absolute right-0 mt-3 w-40 bg-slate-900/90 backdrop-blur-xl border border-white/10 rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.5)] py-2 overflow-hidden">
+                <div className="absolute right-0 mt-3 w-44 bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-glass py-2 overflow-hidden">
                   {locales.map((locale) => (
                     <button
                       key={locale.code}
                       onClick={() => changeLocale(locale.code)}
-                      className="w-full px-4 py-2 text-left text-slate-300 hover:bg-slate-800 hover:text-primary-400 transition-colors flex items-center space-x-3"
+                      className={`w-full px-4 py-2.5 text-left transition-all flex items-center space-x-3 ${
+                        currentLocale === locale.code
+                          ? "text-primary-400 bg-primary-500/10"
+                          : "text-slate-300 hover:bg-slate-800 hover:text-white"
+                      }`}
                     >
-                      <span className="text-lg">{locale.flag}</span>
-                      <span className="font-medium tracking-wide">{locale.name}</span>
+                      <span className="text-sm font-bold tracking-wider w-7">
+                        {locale.flag}
+                      </span>
+                      <span className="font-medium tracking-wide text-sm">
+                        {locale.name}
+                      </span>
                     </button>
                   ))}
                 </div>
@@ -117,13 +150,13 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-slate-950/95 backdrop-blur-xl border-t border-white/10 shadow-inner">
-          <div className="px-4 py-4 space-y-2">
+        <div className="md:hidden bg-slate-950/98 backdrop-blur-xl border-t border-white/5 shadow-glass-lg">
+          <div className="px-4 py-4 space-y-1">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-4 py-3 rounded-lg hover:bg-slate-800/80 text-slate-300 hover:text-primary-400 transition-all font-medium tracking-wide uppercase border border-transparent hover:border-white/5"
+                className="block px-4 py-3.5 rounded-xl hover:bg-slate-800/80 text-slate-300 hover:text-primary-400 transition-all font-medium tracking-wide uppercase border border-transparent hover:border-white/5 text-sm"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}

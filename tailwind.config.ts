@@ -6,6 +6,7 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./sections/**/*.{js,ts,jsx,tsx,mdx}",
+    "./animations/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -51,26 +52,47 @@ const config: Config = {
         },
       },
       borderRadius: {
-        "xl": "1rem",
+        xl: "1rem",
         "2xl": "1.5rem",
         "3xl": "2rem",
       },
       boxShadow: {
-        "soft": "0 4px 20px rgba(0, 0, 0, 0.08)",
-        "medium": "0 8px 30px rgba(0, 0, 0, 0.12)",
-        "strong": "0 12px 40px rgba(0, 0, 0, 0.16)",
+        soft: "0 4px 20px rgba(0, 0, 0, 0.08)",
+        medium: "0 8px 30px rgba(0, 0, 0, 0.12)",
+        strong: "0 12px 40px rgba(0, 0, 0, 0.16)",
+        glow: "0 0 20px rgba(45, 150, 218, 0.3)",
+        "glow-lg": "0 0 30px rgba(45, 150, 218, 0.4)",
+        "glow-sm": "0 0 15px rgba(45, 150, 218, 0.2)",
+        "glow-hover": "0 0 40px rgba(45, 150, 218, 0.35)",
+        glass: "0 8px 32px rgba(0, 0, 0, 0.3)",
+        "glass-lg": "0 16px 48px rgba(0, 0, 0, 0.4)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-primary":
+          "linear-gradient(135deg, #2d96da 0%, #1d5a86 100%)",
+        "gradient-hero":
+          "linear-gradient(135deg, #2d96da 0%, #47a7e3 50%, #2578b0 100%)",
       },
       animation: {
         marquee: "marquee 40s linear infinite",
+        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
       },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
+        },
+        "glow-pulse": {
+          "0%, 100%": { opacity: "0.4" },
+          "50%": { opacity: "0.8" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
         },
       },
     },

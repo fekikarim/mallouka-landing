@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Mallouka Motors | Allo Casse Auto | Imported Engines & Automotive Spare Parts in Tunisia",
-    "description": "Trusted Automotive Specialists Since 2003. Mallouka Motors (formerly Allo Casse Auto) offers imported engines, gearboxes, spare parts, and professional mechanical workshop services in Tunisia.",
+    "description": "Trusted Automotive Specialists Since 2003. Mallouka Motors (known for years as Allo Casse Auto) offers imported engines, gearboxes, spare parts, and professional mechanical workshop services in Tunisia.",
     "keywords": "Mallouka Motors, Allo Casse Auto, Imported Engines Tunisia, Used Engines Tunisia, Automotive Spare Parts Tunisia, Mechanical Workshop Tunisia"
   },
   "nav": {
@@ -33,7 +33,7 @@
   "about": {
     "title": "About Us",
     "subtitle": "Your Trusted Automotive Partner",
-    "description": "Mallouka Motors, formerly known as Allo Casse Auto, has been serving Tunisia's automotive needs since 2003. We specialize in importing high-quality engines, gearboxes, and spare parts from Europe, providing our customers with reliable solutions for their vehicles.",
+    "description": "Mallouka Motors, known for years as Allo Casse Auto, has been serving Tunisia's automotive needs since 2003. We specialize in importing high-quality engines, gearboxes, and spare parts from Europe, providing our customers with reliable solutions for their vehicles.",
     "mission": "Our Mission",
     "missionText": "To provide premium automotive parts and services with unmatched quality and customer service.",
     "vision": "Our Vision",
@@ -87,6 +87,7 @@
     "step4": "Installation",
     "step4Desc": "Professional installation by our expert team",
     "customRequest": "Need a Custom Request?",
+    "customRequestDesc": "Can't find the engine you need? We can source it from our extensive network of suppliers across Europe and beyond.",
     "contactUs": "Contact Us"
   },
   "whyChoose": {
@@ -111,64 +112,81 @@
   },
   "workshop": {
     "title": "Mechanical Workshop",
-    "subtitle": "Branch 2 - Professional Services",
-    "description": "Our second branch offers comprehensive mechanical workshop services with state-of-the-art equipment and experienced technicians.",
+    "subtitle": "Professional Engine & Mechanical Services",
+    "description": "Our dedicated mechanical workshop offers comprehensive services with state-of-the-art equipment and experienced technicians.",
     "services": "Workshop Services",
+    "service1": "Engine Installation & Replacement",
+    "service2": "Vehicle Diagnostics & Repair",
+    "service3": "Preventive Maintenance",
+    "service4": "Electrical Systems Service",
     "address": "Address",
-    "addressValue": "Rue Jaber Ibn Hayen, Tunis 2070",
-    "phone": "Phone",
-    "phoneValue": "+216 24 270 888"
+    "phone": "Phone"
   },
   "gallery": {
     "title": "Gallery",
-    "subtitle": "Our Facilities and Work",
-    "exterior": "Exterior View",
-    "interior": "Interior View",
-    "office": "Office Door",
-    "outdoor": "Outdoor Area",
-    "video": "Interior Tour"
+    "subtitle": "Our Facilities and Work"
   },
   "testimonials": {
     "title": "What Our Customers Say",
-    "subtitle": "Trusted by Thousands",
-    "customer1": "Excellent service and quality parts. Highly recommended!",
-    "customer2": "Professional team with great expertise. Saved me time and money.",
-    "customer3": "Best place for imported engines in Tunisia. Very reliable.",
-    "customer4": "Outstanding customer service and fast delivery."
+    "subtitle": "Trusted by Thousands Across Multiple Countries"
   },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Common Questions About Our Services",
     "q1": "What types of engines do you import?",
-    "a1": "We import various types of engines including petrol, diesel, and hybrid engines from reputable European sources.",
+    "a1": "We import various types of engines including petrol, diesel, and hybrid engines from reputable European sources including France, Belgium, Germany, Italy, and Spain.",
     "q2": "Do you offer installation services?",
-    "a2": "Yes, we provide professional engine installation services at our mechanical workshop.",
+    "a2": "Yes, we provide professional engine installation services at our mechanical workshop. Our experienced technicians ensure proper installation and testing.",
     "q3": "What is your warranty policy?",
-    "a3": "We offer warranty coverage on our engines and parts. Contact us for specific warranty terms.",
+    "a3": "We offer warranty coverage on our engines and parts. The warranty terms vary depending on the type of part. Contact us for specific warranty details for your purchase.",
     "q4": "How long does shipping take?",
-    "a4": "Shipping times vary depending on the source country and availability. We provide estimated delivery times for each order.",
+    "a4": "Shipping times vary depending on the source country and availability. Typically, orders from Europe take 2-4 weeks. We provide estimated delivery times for each order.",
     "q5": "Do you ship to other countries?",
-    "a5": "Yes, we serve multiple countries. Contact us to check if we ship to your location."
+    "a5": "Yes, we serve multiple countries including Tunisia, Algeria, Morocco, and others. Contact us to check if we ship to your location.",
+    "q6": "How can I track my order?",
+    "a6": "Once your order is shipped, we provide you with tracking information so you can monitor your shipment's progress.",
+    "q7": "What payment methods do you accept?",
+    "a7": "We accept various payment methods including bank transfers, cash, and mobile payment options. Contact us for more details.",
+    "q8": "Do you provide technical support?",
+    "a8": "Yes, our knowledgeable team is available to provide technical support and answer any questions you may have about our products and services."
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "Get in Touch",
+    "subtitle": "Get in Touch with Our Team",
     "name": "Name",
     "email": "Email",
     "phone": "Phone",
     "message": "Message",
     "send": "Send Message",
-    "branch1": "Branch 1",
-    "branch2": "Branch 2",
+    "sending": "Sending...",
+    "successTitle": "Message Sent!",
+    "successMessage": "Thank you for your message. We will get back to you soon.",
+    "branch1": "Mallouka Motors - Spare Parts",
+    "branch2": "Mechanical Workshop",
     "whatsapp": "WhatsApp",
-    "emailLabel": "Email"
+    "address": "Address",
+    "mapTitle": "Find Us",
+    "mapSubtitle": "Visit Our Two Locations",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "your@email.com",
+    "phonePlaceholder": "+216 XX XXX XXX",
+    "messagePlaceholder": "How can we help you?"
   },
   "footer": {
     "about": "About Mallouka Motors",
-    "aboutText": "Trusted automotive specialists since 2003. Your partner for quality engines, gearboxes, and spare parts.",
+    "aboutText": "Trusted automotive specialists since 2003. Your partner for quality engines, gearboxes, and spare parts. Known for years as Allo Casse Auto.",
     "quickLinks": "Quick Links",
+    "homeLink": "Home",
+    "aboutLink": "About",
+    "servicesLink": "Services",
+    "brandsLink": "Brands",
+    "contactLink": "Contact",
     "contact": "Contact",
     "followUs": "Follow Us",
+    "hours": "Business Hours",
+    "weekdays": "Monday - Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
     "rights": "All rights reserved."
   }
 }

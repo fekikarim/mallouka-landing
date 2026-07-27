@@ -3,7 +3,7 @@ export const servicesData = [
     id: 1,
     title: "Imported Engines",
     description: "High-quality engines sourced from France, Belgium, Germany, Italy, and Spain",
-    icon: "Engine",
+    icon: "Cog",
   },
   {
     id: 2,

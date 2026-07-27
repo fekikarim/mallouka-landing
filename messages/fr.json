@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Mallouka Motors | Allo Casse Auto | Moteurs Importés et Pièces Automobiles en Tunisie",
-    "description": "Spécialistes Automobiles de Confiance Depuis 2003. Mallouka Motors (anciennement Allo Casse Auto) propose des moteurs importés, boîtes de vitesses, pièces de rechange et services d'atelier mécanique professionnels en Tunisie.",
+    "description": "Spécialistes Automobiles de Confiance Depuis 2003. Mallouka Motors (connu depuis des années comme Allo Casse Auto) propose des moteurs importés, boîtes de vitesses, pièces de rechange et services d'atelier mécanique professionnels en Tunisie.",
     "keywords": "Mallouka Motors, Allo Casse Auto, Moteurs Importés Tunisie, Moteurs d'Occasion Tunisie, Pièces Automobiles Tunisie, Atelier Mécanique Tunisie"
   },
   "nav": {
@@ -33,7 +33,7 @@
   "about": {
     "title": "À Propos de Nous",
     "subtitle": "Votre Partenaire Automobile de Confiance",
-    "description": "Mallouka Motors, anciennement connu sous le nom d'Allo Casse Auto, sert les besoins automobiles de la Tunisie depuis 2003. Nous nous spécialisons dans l'importation de moteurs, boîtes de vitesses et pièces de rechange de haute qualité depuis l'Europe.",
+    "description": "Mallouka Motors, connu depuis des années sous le nom d'Allo Casse Auto, sert les besoins automobiles de la Tunisie depuis 2003. Nous nous spécialisons dans l'importation de moteurs, boîtes de vitesses et pièces de rechange de haute qualité depuis l'Europe.",
     "mission": "Notre Mission",
     "missionText": "Fournir des pièces et services automobiles premium avec une qualité et un service client inégalés.",
     "vision": "Notre Vision",
@@ -87,6 +87,7 @@
     "step4": "Installation",
     "step4Desc": "Installation professionnelle par notre équipe d'experts",
     "customRequest": "Besoin d'une Demande Personnalisée?",
+    "customRequestDesc": "Vous ne trouvez pas le moteur que vous recherchez? Nous pouvons le sourced via notre réseau étendu de fournisseurs en Europe et au-delà.",
     "contactUs": "Contactez-nous"
   },
   "whyChoose": {
@@ -111,30 +112,23 @@
   },
   "workshop": {
     "title": "Atelier Mécanique",
-    "subtitle": "Branche 2 - Services Professionnels",
-    "description": "Notre deuxième branche offre des services complets d'atelier mécanique avec un équipement de pointe et des techniciens expérimentés.",
+    "subtitle": "Services Professionnels de Moteur & Mécanique",
+    "description": "Notre atelier mécanique dédié offre des services complets avec des équipements de pointe et des techniciens expérimentés.",
     "services": "Services de l'Atelier",
+    "service1": "Installation & Remplacement de Moteur",
+    "service2": "Diagnostic & Réparation de Véhicules",
+    "service3": "Maintenance Préventive",
+    "service4": "Service des Systèmes Électriques",
     "address": "Adresse",
-    "addressValue": "Rue Jaber Ibn Hayen, Tunis 2070",
-    "phone": "Téléphone",
-    "phoneValue": "+216 24 270 888"
+    "phone": "Téléphone"
   },
   "gallery": {
     "title": "Galerie",
-    "subtitle": "Nos Installations et Notre Travail",
-    "exterior": "Vue Extérieure",
-    "interior": "Vue Intérieure",
-    "office": "Porte du Bureau",
-    "outdoor": "Zone Extérieure",
-    "video": "Visite Intérieure"
+    "subtitle": "Nos Installations et Notre Travail"
   },
   "testimonials": {
     "title": "Ce Que Disent Nos Clients",
-    "subtitle": "Approuvé par des Milliers",
-    "customer1": "Service excellent et pièces de qualité. Hautement recommandé!",
-    "customer2": "Équipe professionnelle avec une grande expertise. M'a fait gagner du temps et de l'argent.",
-    "customer3": "Meilleur endroit pour les moteurs importés en Tunisie. Très fiable.",
-    "customer4": "Service client exceptionnel et livraison rapide."
+    "subtitle": "Approuvé par des Milliers à Travers Plusieurs Pays"
   },
   "faq": {
     "title": "Questions Fréquentes",
@@ -148,27 +142,51 @@
     "q4": "Combien de temps prend l'expédition?",
     "a4": "Les délais d'expédition varient selon le pays d'origine et la disponibilité. Nous fournissons des délais de livraison estimés pour chaque commande.",
     "q5": "Expédiez-vous vers d'autres pays?",
-    "a5": "Oui, nous servons plusieurs pays. Contactez-nous pour vérifier si nous expédions vers votre localisation."
+    "a5": "Oui, nous servons plusieurs pays. Contactez-nous pour vérifier si nous expédions vers votre localisation.",
+    "q6": "Comment puis-je suivre ma commande?",
+    "a6": "Une fois votre commande expédiée, nous vous fournissons des informations de suivi pour surveiller l'avancement de votre envoi.",
+    "q7": "Quels modes de paiement acceptez-vous?",
+    "a7": "Nous acceptons divers modes de paiement y compris les virements bancaires, les espèces et les options de paiement mobile. Contactez-nous pour plus de détails.",
+    "q8": "Fournissez-vous un support technique?",
+    "a8": "Oui, notre équipe compétente est disponible pour fournir un support technique et répondre à toutes vos questions."
   },
   "contact": {
     "title": "Contactez-nous",
-    "subtitle": "Entrer en Contact",
+    "subtitle": "Entrez en Contact avec Notre Équipe",
     "name": "Nom",
     "email": "Email",
     "phone": "Téléphone",
     "message": "Message",
     "send": "Envoyer le Message",
-    "branch1": "Branche 1",
-    "branch2": "Branche 2",
+    "sending": "Envoi en cours...",
+    "successTitle": "Message Envoyé!",
+    "successMessage": "Merci pour votre message. Nous vous répondrons bientôt.",
+    "branch1": "Mallouka Motors - Pièces de Rechange",
+    "branch2": "Atelier Mécanique",
     "whatsapp": "WhatsApp",
-    "emailLabel": "Email"
+    "address": "Adresse",
+    "mapTitle": "Nous Trouver",
+    "mapSubtitle": "Visitez Nos Deux Emplacements",
+    "namePlaceholder": "Votre nom complet",
+    "emailPlaceholder": "votre@email.com",
+    "phonePlaceholder": "+216 XX XXX XXX",
+    "messagePlaceholder": "Comment pouvons-nous vous aider?"
   },
   "footer": {
     "about": "À Propos de Mallouka Motors",
-    "aboutText": "Spécialistes automobiles de confiance depuis 2003. Votre partenaire pour des moteurs, boîtes de vitesses et pièces de rechange de qualité.",
+    "aboutText": "Spécialistes automobiles de confiance depuis 2003. Votre partenaire pour des moteurs, boîtes de vitesses et pièces de rechange de qualité. Connu depuis des années comme Allo Casse Auto.",
     "quickLinks": "Liens Rapides",
+    "homeLink": "Accueil",
+    "aboutLink": "À propos",
+    "servicesLink": "Services",
+    "brandsLink": "Marques",
+    "contactLink": "Contact",
     "contact": "Contact",
     "followUs": "Suivez-nous",
+    "hours": "Heures d'Ouverture",
+    "weekdays": "Lundi - Samedi",
+    "sunday": "Dimanche",
+    "closed": "Fermé",
     "rights": "Tous droits réservés."
   }
 }

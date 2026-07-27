@@ -1,77 +1,117 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "../animations/scroll-reveal";
-import { Heading, Subheading, Body } from "@/components/ui/typography";
-import { Card } from "@/components/ui/card";
+import { GlowCard } from "@/components/ui/glow-card";
 import { IconWrapper } from "@/components/ui/icon-wrapper";
+import { SectionHeader } from "@/components/ui/section-header";
+import { GlowOrb } from "@/components/ui/glow-orb";
 import { Award, Target, Heart } from "lucide-react";
 
 export const About = () => {
   const t = useTranslations("about");
 
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-        <ScrollReveal>
-          <div className="text-center mb-12">
-            <Heading>{t("title")}</Heading>
-            <Subheading>{t("subtitle")}</Subheading>
-          </div>
-        </ScrollReveal>
+    <section id="about" className="relative overflow-hidden">
+      <div className="bg-slate-950 py-24 relative">
+        <GlowOrb color="primary" size="md" className="top-0 right-0 opacity-40" />
+        <GlowOrb color="blue" size="sm" className="bottom-0 left-1/4" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <ScrollReveal>
-            <Body size="lg">{t("description")}</Body>
-          </ScrollReveal>
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 relative z-10">
+          <SectionHeader
+            title={t("title")}
+            subtitle={t("subtitle")}
+            dark
+          />
 
-          <div className="space-y-6">
-            <ScrollReveal delay={0.2}>
-              <Card hover>
-                <div className="flex items-start space-x-4">
-                  <IconWrapper variant="primary">
-                    <Target className="w-6 h-6" />
-                  </IconWrapper>
-                  <div>
-                    <h3 className="text-xl font-semibold text-secondary mb-2">{t("mission")}</h3>
-                    <Body>{t("missionText")}</Body>
-                  </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollReveal variant="fadeInLeft">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-blue-500/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700" />
+                <div className="relative rounded-3xl overflow-hidden border border-slate-700/50 shadow-glass">
+                  <Image
+                    src="/assets/components/auto-service-illustration.png"
+                    alt="Mallouka Motors Service"
+                    width={600}
+                    height={500}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
                 </div>
-              </Card>
+
+
+              </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.4}>
-              <Card hover>
-                <div className="flex items-start space-x-4">
-                  <IconWrapper variant="primary">
-                    <Award className="w-6 h-6" />
-                  </IconWrapper>
-                  <div>
-                    <h3 className="text-xl font-semibold text-secondary mb-2">{t("vision")}</h3>
-                    <Body>{t("visionText")}</Body>
-                  </div>
-                </div>
-              </Card>
-            </ScrollReveal>
+            <div className="space-y-6">
+              <ScrollReveal variant="fadeInRight" delay={0.1}>
+                <p className="text-lg text-slate-300 leading-relaxed">
+                  {t("description")}
+                </p>
+              </ScrollReveal>
 
-            <ScrollReveal delay={0.6}>
-              <Card hover>
-                <div className="flex items-start space-x-4">
-                  <IconWrapper variant="primary">
-                    <Heart className="w-6 h-6" />
-                  </IconWrapper>
-                  <div>
-                    <h3 className="text-xl font-semibold text-secondary mb-2">{t("values")}</h3>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      <span className="px-3 py-1 bg-primary-100 text-primary rounded-full text-sm">{t("quality")}</span>
-                      <span className="px-3 py-1 bg-primary-100 text-primary rounded-full text-sm">{t("integrity")}</span>
-                      <span className="px-3 py-1 bg-primary-100 text-primary rounded-full text-sm">{t("reliability")}</span>
+              <ScrollReveal variant="fadeInRight" delay={0.2}>
+                <GlowCard variant="dark" hover>
+                  <div className="flex items-start gap-4">
+                    <IconWrapper variant="primary" size="lg">
+                      <Target className="w-6 h-6" />
+                    </IconWrapper>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        {t("mission")}
+                      </h3>
+                      <p className="text-slate-400">{t("missionText")}</p>
                     </div>
                   </div>
-                </div>
-              </Card>
-            </ScrollReveal>
+                </GlowCard>
+              </ScrollReveal>
+
+              <ScrollReveal variant="fadeInRight" delay={0.3}>
+                <GlowCard variant="dark" hover>
+                  <div className="flex items-start gap-4">
+                    <IconWrapper variant="primary" size="lg">
+                      <Award className="w-6 h-6" />
+                    </IconWrapper>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        {t("vision")}
+                      </h3>
+                      <p className="text-slate-400">{t("visionText")}</p>
+                    </div>
+                  </div>
+                </GlowCard>
+              </ScrollReveal>
+
+              <ScrollReveal variant="fadeInRight" delay={0.4}>
+                <GlowCard variant="dark" hover>
+                  <div className="flex items-start gap-4">
+                    <IconWrapper variant="primary" size="lg">
+                      <Heart className="w-6 h-6" />
+                    </IconWrapper>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-3">
+                        {t("values")}
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        {[t("quality"), t("integrity"), t("reliability")].map(
+                          (value) => (
+                            <span
+                              key={value}
+                              className="px-4 py-1.5 bg-primary-500/10 border border-primary-500/20 text-primary-300 rounded-full text-sm font-medium"
+                            >
+                              {value}
+                            </span>
+                          )
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </GlowCard>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </div>

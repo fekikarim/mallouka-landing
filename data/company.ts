@@ -8,14 +8,14 @@ export const companyData = {
   branches: [
     {
       id: 1,
-      name: "Branch 1",
-      address: "Rue Ibn El Jazzar, Bhar Lazreg, La Marsa",
+      name: "Mallouka Motors - Spare Parts",
+      address: "Rue Ibn El Jazzar, Bhar Lazreg, La Marsa, Tunis 2046",
       phone: "+216 24 270 888",
     },
     {
       id: 2,
-      name: "Branch 2",
-      address: "Rue Jaber Ibn Hayen, Tunis 2070",
+      name: "Mechanical Workshop",
+      address: "Rue Jaber Ibn Hayen, El Bahr, Tunis 2070",
       phone: "+216 24 270 888",
     },
   ],

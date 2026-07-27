@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { AlertTriangle, RefreshCw } from "lucide-react";
 
 export default function Error({
   error,
@@ -11,29 +11,40 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  const t = useTranslations("error" as any); // Might not have translation for error, fallback to english
-
   useEffect(() => {
-    // Log the error to an error reporting service
     console.error(error);
   }, [error]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-slate-950 px-4">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl" />
+      </div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-center"
+        className="text-center relative z-10"
       >
-        <h2 className="text-3xl font-bold text-red-600 mb-4">Something went wrong!</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-md mx-auto">
-          We apologize for the inconvenience. An unexpected error has occurred. Our team has been notified.
+        <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-red-500/10 border border-red-500/20 mb-8">
+          <AlertTriangle className="w-10 h-10 text-red-400" />
+        </div>
+
+        <h2 className="text-3xl font-bold text-white mb-4">
+          Something went wrong
+        </h2>
+        <p className="text-slate-400 mb-8 max-w-md mx-auto leading-relaxed">
+          We apologize for the inconvenience. An unexpected error has occurred.
+          Please try again.
         </p>
+
         <button
           onClick={() => reset()}
-          className="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-full transition-colors"
+          className="inline-flex items-center gap-3 bg-gradient-to-r from-primary-500 to-blue-500 hover:from-primary-600 hover:to-blue-600 text-white font-semibold py-3.5 px-8 rounded-xl transition-all duration-300 shadow-glow hover:shadow-glow-lg"
         >
-          Try again
+          <RefreshCw className="w-5 h-5" />
+          Try Again
         </button>
       </motion.div>
     </div>
