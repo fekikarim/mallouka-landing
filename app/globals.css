@@ -71,3 +71,12 @@
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(45,150,218,0.5), transparent);
 }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}

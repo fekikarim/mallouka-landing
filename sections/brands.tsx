@@ -37,7 +37,7 @@ export const Brands = () => {
                 alt={brand.name}
                 width={200}
                 height={100}
-                className="w-auto h-auto max-w-[180px] max-h-[90px] object-contain brightness-0 invert opacity-60 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 drop-shadow-[0_0_8px_rgba(255,255,255,0.05)] hover:drop-shadow-[0_0_12px_rgba(45,150,218,0.4)]"
+                className="w-auto h-auto max-w-[180px] max-h-[90px] object-contain brightness-0 invert opacity-50 hover:opacity-100 hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.5)] transition-all duration-500"
               />
             </div>
           ))}

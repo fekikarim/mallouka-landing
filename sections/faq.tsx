@@ -52,7 +52,7 @@ export const FAQ = () => {
                         openIndex === index ? "text-white" : "text-slate-300"
                       }`}
                     >
-                      {faq.question}
+                      {t(`faqItems.q${faq.id}`)}
                     </h3>
                   </div>
                   <div
@@ -81,7 +81,7 @@ export const FAQ = () => {
                       <div className="px-6 pb-6 pt-0">
                         <div className="pl-14 border-l-2 border-primary-500/30 ml-0">
                           <p className="text-slate-400 leading-relaxed">
-                            {faq.answer}
+                            {t(`faqItems.a${faq.id}`)}
                           </p>
                         </div>
                       </div>

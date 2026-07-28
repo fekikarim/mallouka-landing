@@ -5,10 +5,9 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "../animations/scroll-reveal";
 import { GlowCard } from "@/components/ui/glow-card";
-import { IconWrapper } from "@/components/ui/icon-wrapper";
 import { SectionHeader } from "@/components/ui/section-header";
 import { GlowOrb } from "@/components/ui/glow-orb";
-import { Award, Target, Heart } from "lucide-react";
+import { Crosshair, Eye, Gem } from "lucide-react";
 
 export const About = () => {
   const t = useTranslations("about");
@@ -56,9 +55,9 @@ export const About = () => {
               <ScrollReveal variant="fadeInRight" delay={0.2}>
                 <GlowCard variant="dark" hover>
                   <div className="flex items-start gap-4">
-                    <IconWrapper variant="primary" size="lg">
-                      <Target className="w-6 h-6" />
-                    </IconWrapper>
+                    <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary-500/15 flex items-center justify-center">
+                      <Crosshair className="w-6 h-6 text-primary-400" />
+                    </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">
                         {t("mission")}
@@ -72,9 +71,9 @@ export const About = () => {
               <ScrollReveal variant="fadeInRight" delay={0.3}>
                 <GlowCard variant="dark" hover>
                   <div className="flex items-start gap-4">
-                    <IconWrapper variant="primary" size="lg">
-                      <Award className="w-6 h-6" />
-                    </IconWrapper>
+                    <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary-500/15 flex items-center justify-center">
+                      <Eye className="w-6 h-6 text-primary-400" />
+                    </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">
                         {t("vision")}
@@ -88,9 +87,9 @@ export const About = () => {
               <ScrollReveal variant="fadeInRight" delay={0.4}>
                 <GlowCard variant="dark" hover>
                   <div className="flex items-start gap-4">
-                    <IconWrapper variant="primary" size="lg">
-                      <Heart className="w-6 h-6" />
-                    </IconWrapper>
+                    <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-primary-500/15 flex items-center justify-center">
+                      <Gem className="w-6 h-6 text-primary-400" />
+                    </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-3">
                         {t("values")}

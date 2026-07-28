@@ -5,7 +5,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import "../globals.css";
 
-const locales = ["en", "fr", "ar"];
+const locales = ["fr", "en", "ar"];
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -20,6 +20,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
+    icons: {
+      icon: "/assets/logo/mallouka_motors_logo.svg",
+    },
     openGraph: {
       title: t("title"),
       description: t("description"),
@@ -57,6 +60,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: "metadata" });
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
@@ -69,7 +73,7 @@ export default async function LocaleLayout({
               "@type": "AutoRepair",
               name: "Mallouka Motors",
               alternateName: "Allo Casse Auto",
-              description: "Trusted automotive specialists since 2003. Premium imported engines and automotive services in Tunisia.",
+              description: t("description"),
               url: "https://malloukamotors.com",
               telephone: "+216 24 270 888",
               email: "malloukamotors21@gmail.com",
@@ -79,7 +83,7 @@ export default async function LocaleLayout({
                 addressLocality: "La Marsa",
                 addressCountry: "TN",
               },
-              openingHours: "Mo-Sa 08:00-18:00",
+              openingHours: "Mo-Fr 08:30-17:30, Sa 08:30-15:30",
               priceRange: "$$",
             }),
           }}

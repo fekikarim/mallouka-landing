@@ -17,8 +17,8 @@ export const Maps = () => {
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 relative z-10">
         <SectionHeader
-          title={t("mapTitle") || "Find Us"}
-          subtitle={t("mapSubtitle") || "Visit Our Locations"}
+          title={t("mapTitle")}
+          subtitle={t("mapSubtitle")}
           dark={false}
         />
 

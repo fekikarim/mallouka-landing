@@ -44,8 +44,6 @@
     "reliability": "Reliability"
   },
   "timeline": {
-    "title": "Our History",
-    "subtitle": "A Journey of Excellence",
     "2003": {
       "title": "Marsa Casse",
       "description": "Founded as Marsa Casse, beginning our journey in automotive services."
@@ -57,6 +55,19 @@
     "2020": {
       "title": "Mallouka Motors",
       "description": "Evolved into Mallouka Motors, offering comprehensive automotive solutions."
+    },
+    "title": "Our History",
+    "subtitle": "A Journey of Excellence",
+    "timelineItems": {
+      "year2003": "2003",
+      "title2003": "Marsa Casse",
+      "desc2003": "Founded as Marsa Casse, beginning our journey in automotive services in La Marsa, Tunisia.",
+      "title2012-2013": "Allo Casse Auto",
+      "desc2012-2013": "Rebranded as Allo Casse Auto, expanding our services and reach to serve more customers across Tunisia.",
+      "year2012-2013": "2012",
+      "title2020-Present": "Mallouka Motors",
+      "desc2020-Present": "Evolved into Mallouka Motors, offering comprehensive automotive solutions with two branches and expanded services.",
+      "year2020-Present": "2020"
     }
   },
   "services": {
@@ -73,7 +84,31 @@
     "diagnostics": "Diagnostics",
     "diagnosticsDesc": "Advanced vehicle diagnostics",
     "maintenance": "Maintenance",
-    "maintenanceDesc": "Regular maintenance and repairs"
+    "maintenanceDesc": "Regular maintenance and repairs",
+    "item1": "Imported Engines",
+    "item1Desc": "High-quality engines sourced from France, Belgium, Germany, Italy, and Spain",
+    "item2": "Gearboxes",
+    "item2Desc": "Reliable transmission systems for all vehicle types",
+    "item3": "Spare Parts",
+    "item3Desc": "Genuine automotive spare parts from trusted manufacturers",
+    "item4": "Engine Installation",
+    "item4Desc": "Professional engine installation services by expert technicians",
+    "item5": "Vehicle Diagnostics",
+    "item5Desc": "Advanced diagnostic tools to identify and resolve issues",
+    "item6": "Maintenance & Repairs",
+    "item6Desc": "Regular maintenance and repair services for all vehicles",
+    "item7": "Oil Changes",
+    "item7Desc": "Quick and efficient oil change services",
+    "item8": "Brake Services",
+    "item8Desc": "Complete brake inspection and repair services",
+    "item9": "Suspension Work",
+    "item9Desc": "Expert suspension system repairs and upgrades",
+    "item10": "Electrical Systems",
+    "item10Desc": "Diagnosis and repair of vehicle electrical systems",
+    "errorTitle": "Unable to Load Services",
+    "retry": "Try Again",
+    "emptyTitle": "No Services Found",
+    "emptyDesc": "Service information is currently unavailable."
   },
   "process": {
     "title": "Engine Import Process",
@@ -124,31 +159,65 @@
   },
   "gallery": {
     "title": "Gallery",
-    "subtitle": "Our Facilities and Work"
+    "subtitle": "Our Facilities and Work",
+    "galleryItems": {
+      "item1Title": "Exterior View",
+      "item1Alt": "Mallouka Motors exterior view",
+      "item2Title": "Interior Workshop",
+      "item2Alt": "Mallouka Motors interior view",
+      "item3Title": "Office Entrance",
+      "item3Alt": "Mallouka Motors office entrance",
+      "item4Title": "Outdoor Area",
+      "item4Alt": "Mallouka Motors outdoor area",
+      "item5Title": "Video Tour",
+      "item5Alt": "Mallouka Motors interior video tour"
+    }
   },
   "testimonials": {
     "title": "What Our Customers Say",
-    "subtitle": "Trusted by Thousands Across Multiple Countries"
+    "subtitle": "Trusted by Thousands Across Multiple Countries",
+    "testimonialItems": {
+      "item1Name": "Ahmed Ben Ali",
+      "item1Location": "Tunis, Tunisia",
+      "item1Text": "Excellent service and quality parts. They helped me find the exact engine I needed for my BMW. Highly recommended!",
+      "item2Name": "Marie Dupont",
+      "item2Location": "Paris, France",
+      "item2Text": "Professional team with great expertise. They sourced a rare engine part that I couldn't find anywhere else.",
+      "item3Name": "Mohamed Khaled",
+      "item3Location": "Algiers, Algeria",
+      "item3Text": "Best place for imported engines in the region. Fair prices and honest business. Will definitely come back.",
+      "item4Name": "Sarah Johnson",
+      "item4Location": "London, UK",
+      "item4Text": "Outstanding customer service and fast delivery. My order arrived in perfect condition and earlier than expected.",
+      "item5Name": "Youssef Amri",
+      "item5Location": "Sfax, Tunisia",
+      "item5Text": "Great experience from start to finish. The team was knowledgeable and helped me choose the right parts for my vehicle.",
+      "item6Name": "Fatima Zahra",
+      "item6Location": "Casablanca, Morocco",
+      "item6Text": "Very professional and knowledgeable staff. They provided excellent guidance on which engine would be best for my car."
+    }
   },
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Common Questions About Our Services",
-    "q1": "What types of engines do you import?",
-    "a1": "We import various types of engines including petrol, diesel, and hybrid engines from reputable European sources including France, Belgium, Germany, Italy, and Spain.",
-    "q2": "Do you offer installation services?",
-    "a2": "Yes, we provide professional engine installation services at our mechanical workshop. Our experienced technicians ensure proper installation and testing.",
-    "q3": "What is your warranty policy?",
-    "a3": "We offer warranty coverage on our engines and parts. The warranty terms vary depending on the type of part. Contact us for specific warranty details for your purchase.",
-    "q4": "How long does shipping take?",
-    "a4": "Shipping times vary depending on the source country and availability. Typically, orders from Europe take 2-4 weeks. We provide estimated delivery times for each order.",
-    "q5": "Do you ship to other countries?",
-    "a5": "Yes, we serve multiple countries including Tunisia, Algeria, Morocco, and others. Contact us to check if we ship to your location.",
-    "q6": "How can I track my order?",
-    "a6": "Once your order is shipped, we provide you with tracking information so you can monitor your shipment's progress.",
-    "q7": "What payment methods do you accept?",
-    "a7": "We accept various payment methods including bank transfers, cash, and mobile payment options. Contact us for more details.",
-    "q8": "Do you provide technical support?",
-    "a8": "Yes, our knowledgeable team is available to provide technical support and answer any questions you may have about our products and services."
+    "faqItems": {
+      "q1": "What types of engines do you import?",
+      "a1": "We import various types of engines including petrol, diesel, and hybrid engines from reputable European sources including France, Belgium, Germany, Italy, and Spain.",
+      "q2": "Do you offer installation services?",
+      "a2": "Yes, we provide professional engine installation services at our mechanical workshop. Our experienced technicians ensure proper installation and testing.",
+      "q3": "What is your warranty policy?",
+      "a3": "We offer warranty coverage on our engines and parts. The warranty terms vary depending on the type of part. Contact us for specific warranty details for your purchase.",
+      "q4": "How long does shipping take?",
+      "a4": "Shipping times vary depending on the source country and availability. Typically, orders from Europe take 2-4 weeks. We provide estimated delivery times for each order.",
+      "q5": "Do you ship to other countries?",
+      "a5": "Yes, we serve multiple countries including Tunisia, Algeria, Morocco, and others. Contact us to check if we ship to your location.",
+      "q6": "How can I track my order?",
+      "a6": "Once your order is shipped, we provide you with tracking information so you can monitor your shipment's progress.",
+      "q7": "What payment methods do you accept?",
+      "a7": "We accept various payment methods including bank transfers, cash, and mobile payment options. Contact us for more details.",
+      "q8": "Do you provide technical support?",
+      "a8": "Yes, our knowledgeable team is available to provide technical support and answer any questions you may have about our products and services."
+    }
   },
   "contact": {
     "title": "Contact Us",
@@ -170,7 +239,8 @@
     "namePlaceholder": "Your full name",
     "emailPlaceholder": "your@email.com",
     "phonePlaceholder": "+216 XX XXX XXX",
-    "messagePlaceholder": "How can we help you?"
+    "messagePlaceholder": "How can we help you?",
+    "imageError": "Illustration unavailable"
   },
   "footer": {
     "about": "About Mallouka Motors",
@@ -184,9 +254,20 @@
     "contact": "Contact",
     "followUs": "Follow Us",
     "hours": "Business Hours",
-    "weekdays": "Monday - Saturday",
+    "weekdays": "Monday - Friday",
+    "saturday": "Saturday",
     "sunday": "Sunday",
     "closed": "Closed",
     "rights": "All rights reserved."
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "description": "We apologize for the inconvenience. An unexpected error has occurred. Please try again.",
+    "retry": "Try Again"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+    "backHome": "Return to Homepage"
   }
 }

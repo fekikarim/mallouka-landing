@@ -38,19 +38,19 @@ export const Testimonials = () => {
                 </div>
 
                 <p className="text-secondary-600 mb-6 italic leading-relaxed flex-1">
-                  &ldquo;{testimonial.text}&rdquo;
+                  &ldquo;{t(`testimonialItems.item${testimonial.id}Text`)}&rdquo;
                 </p>
 
                 <div className="flex items-center gap-4 pt-4 border-t border-slate-100">
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
-                    {testimonial.name.charAt(0)}
+                    {t(`testimonialItems.item${testimonial.id}Name`).charAt(0)}
                   </div>
                   <div>
                     <p className="font-semibold text-secondary-900">
-                      {testimonial.name}
+                      {t(`testimonialItems.item${testimonial.id}Name`)}
                     </p>
                     <p className="text-sm text-secondary-400">
-                      {testimonial.location}
+                      {t(`testimonialItems.item${testimonial.id}Location`)}
                     </p>
                   </div>
                 </div>

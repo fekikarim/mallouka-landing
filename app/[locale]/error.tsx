@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { AlertTriangle, RefreshCw } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Error({
   error,
@@ -11,6 +12,8 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const t = useTranslations("errors");
+
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -32,11 +35,10 @@ export default function Error({
         </div>
 
         <h2 className="text-3xl font-bold text-white mb-4">
-          Something went wrong
+          {t("title")}
         </h2>
         <p className="text-slate-400 mb-8 max-w-md mx-auto leading-relaxed">
-          We apologize for the inconvenience. An unexpected error has occurred.
-          Please try again.
+          {t("description")}
         </p>
 
         <button
@@ -44,7 +46,7 @@ export default function Error({
           className="inline-flex items-center gap-3 bg-gradient-to-r from-primary-500 to-blue-500 hover:from-primary-600 hover:to-blue-600 text-white font-semibold py-3.5 px-8 rounded-xl transition-all duration-300 shadow-glow hover:shadow-glow-lg"
         >
           <RefreshCw className="w-5 h-5" />
-          Try Again
+          {t("retry")}
         </button>
       </motion.div>
     </div>

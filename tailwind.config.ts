@@ -80,6 +80,7 @@ const config: Config = {
         marquee: "marquee 40s linear infinite",
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
         float: "float 6s ease-in-out infinite",
+        shimmer: "shimmer 2s ease-in-out infinite",
       },
       keyframes: {
         marquee: {
@@ -93,6 +94,10 @@ const config: Config = {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
     },

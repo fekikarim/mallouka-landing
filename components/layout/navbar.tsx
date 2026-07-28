@@ -30,12 +30,12 @@ export const Navbar = () => {
   }, [isLangMenuOpen]);
 
   const locales = [
-    { code: "en", name: "English", flag: "GB" },
     { code: "fr", name: "Français", flag: "FR" },
+    { code: "en", name: "English", flag: "GB" },
     { code: "ar", name: "العربية", flag: "TN" },
   ];
 
-  const currentLocale = pathname.split("/")[1] || "en";
+  const currentLocale = pathname.split("/")[1] || "fr";
 
   const changeLocale = (locale: string) => {
     const newPath = pathname.replace(`/${currentLocale}`, `/${locale}`);

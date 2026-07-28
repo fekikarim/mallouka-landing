@@ -44,8 +44,6 @@
     "reliability": "Fiabilité"
   },
   "timeline": {
-    "title": "Notre Histoire",
-    "subtitle": "Un Parcours d'Excellence",
     "2003": {
       "title": "Marsa Casse",
       "description": "Fondé sous le nom de Marsa Casse, débutant notre parcours dans les services automobiles."
@@ -57,6 +55,19 @@
     "2020": {
       "title": "Mallouka Motors",
       "description": "Évolué en Mallouka Motors, offrant des solutions automobiles complètes."
+    },
+    "title": "Notre Histoire",
+    "subtitle": "Un Parcours d'Excellence",
+    "timelineItems": {
+      "year2003": "2003",
+      "title2003": "Marsa Casse",
+      "desc2003": "Fondé sous le nom de Marsa Casse, débutant notre parcours dans les services automobiles à La Marsa, Tunisie.",
+      "title2012-2013": "Allo Casse Auto",
+      "desc2012-2013": "Rebaptisé Allo Casse Auto, élargissant nos services et notre portée pour servir plus de clients à travers la Tunisie.",
+      "year2012-2013": "2012",
+      "title2020-Present": "Mallouka Motors",
+      "desc2020-Present": "Évolué en Mallouka Motors, offrant des solutions automobiles complètes avec deux succursales et des services élargis.",
+      "year2020-Present": "2020"
     }
   },
   "services": {
@@ -73,7 +84,31 @@
     "diagnostics": "Diagnostics",
     "diagnosticsDesc": "Diagnostics avancés de véhicules",
     "maintenance": "Maintenance",
-    "maintenanceDesc": "Maintenance et réparations régulières"
+    "maintenanceDesc": "Maintenance et réparations régulières",
+    "item1": "Moteurs Importés",
+    "item1Desc": "Moteurs de haute qualité provenant de France, Belgique, Allemagne, Italie et Espagne",
+    "item2": "Boîtes de Vitesses",
+    "item2Desc": "Systèmes de transmission fiables pour tous types de véhicules",
+    "item3": "Pièces de Rechange",
+    "item3Desc": "Pièces automobiles authentiques de fabricants de confiance",
+    "item4": "Installation de Moteur",
+    "item4Desc": "Services professionnels d'installation de moteur par des techniciens experts",
+    "item5": "Diagnostic de Véhicules",
+    "item5Desc": "Outils de diagnostic avancés pour identifier et résoudre les problèmes",
+    "item6": "Maintenance & Réparations",
+    "item6Desc": "Services de maintenance et réparation réguliers pour tous les véhicules",
+    "item7": "Changement d'Huile",
+    "item7Desc": "Services de changement d'huile rapides et efficaces",
+    "item8": "Services de Freins",
+    "item8Desc": "Inspection et réparation complètes des freins",
+    "item9": "Travail de Suspension",
+    "item9Desc": "Réparations et améliorations expertes du système de suspension",
+    "item10": "Systèmes Électriques",
+    "item10Desc": "Diagnostic et réparation des systèmes électriques de véhicules",
+    "errorTitle": "Impossible de Charger les Services",
+    "retry": "Réessayer",
+    "emptyTitle": "Aucun Service Trouvé",
+    "emptyDesc": "Les informations sur les services sont actuellement indisponibles."
   },
   "process": {
     "title": "Processus d'Importation de Moteurs",
@@ -124,31 +159,65 @@
   },
   "gallery": {
     "title": "Galerie",
-    "subtitle": "Nos Installations et Notre Travail"
+    "subtitle": "Nos Installations et Notre Travail",
+    "galleryItems": {
+      "item1Title": "Vue Extérieure",
+      "item1Alt": "Vue extérieure de Mallouka Motors",
+      "item2Title": "Atelier Intérieur",
+      "item2Alt": "Vue intérieure de Mallouka Motors",
+      "item3Title": "Entrée du Bureau",
+      "item3Alt": "Entrée du bureau de Mallouka Motors",
+      "item4Title": "Espace Extérieur",
+      "item4Alt": "Espace extérieur de Mallouka Motors",
+      "item5Title": "Visite Vidéo",
+      "item5Alt": "Visite vidéo intérieure de Mallouka Motors"
+    }
   },
   "testimonials": {
     "title": "Ce Que Disent Nos Clients",
-    "subtitle": "Approuvé par des Milliers à Travers Plusieurs Pays"
+    "subtitle": "Approuvé par des Milliers à Travers Plusieurs Pays",
+    "testimonialItems": {
+      "item1Name": "Ahmed Ben Ali",
+      "item1Location": "Tunis, Tunisie",
+      "item1Text": "Excellent service et pièces de qualité. Ils m'ont aidé à trouver le moteur exact dont j'avais besoin pour mon BMW. Hautement recommandé!",
+      "item2Name": "Marie Dupont",
+      "item2Location": "Paris, France",
+      "item2Text": "Équipe professionnelle avec une grande expertise. Ils ont trouvé une pièce de moteur rare que je ne trouvais nulle part ailleurs.",
+      "item3Name": "Mohamed Khaled",
+      "item3Location": "Alger, Algérie",
+      "item3Text": "Le meilleur endroit pour les moteurs importés dans la région. Prix équitables et commerce honnête. Je reviendrai certainement.",
+      "item4Name": "Sarah Johnson",
+      "item4Location": "Londres, UK",
+      "item4Text": "Service client exceptionnel et livraison rapide. Ma commande est arrivée en parfait état et plus tôt que prévu.",
+      "item5Name": "Youssef Amri",
+      "item5Location": "Sfax, Tunisie",
+      "item5Text": "Excellente expérience du début à la fin. L'équipe était compétente et m'a aidé à choisir les bonnes pièces pour mon véhicule.",
+      "item6Name": "Fatima Zahra",
+      "item6Location": "Casablanca, Maroc",
+      "item6Text": "Personnel très professionnel et compétent. Ils ont fourni d'excellents conseils sur le moteur le plus adapté à ma voiture."
+    }
   },
   "faq": {
     "title": "Questions Fréquentes",
     "subtitle": "Questions Courantes sur Nos Services",
-    "q1": "Quels types de moteurs importez-vous?",
-    "a1": "Nous importons divers types de moteurs y compris les moteurs essence, diesel et hybrides de sources européennes réputées.",
-    "q2": "Offrez-vous des services d'installation?",
-    "a2": "Oui, nous fournissons des services professionnels d'installation de moteur dans notre atelier mécanique.",
-    "q3": "Quelle est votre politique de garantie?",
-    "a3": "Nous offrons une couverture de garantie sur nos moteurs et pièces. Contactez-nous pour les termes spécifiques.",
-    "q4": "Combien de temps prend l'expédition?",
-    "a4": "Les délais d'expédition varient selon le pays d'origine et la disponibilité. Nous fournissons des délais de livraison estimés pour chaque commande.",
-    "q5": "Expédiez-vous vers d'autres pays?",
-    "a5": "Oui, nous servons plusieurs pays. Contactez-nous pour vérifier si nous expédions vers votre localisation.",
-    "q6": "Comment puis-je suivre ma commande?",
-    "a6": "Une fois votre commande expédiée, nous vous fournissons des informations de suivi pour surveiller l'avancement de votre envoi.",
-    "q7": "Quels modes de paiement acceptez-vous?",
-    "a7": "Nous acceptons divers modes de paiement y compris les virements bancaires, les espèces et les options de paiement mobile. Contactez-nous pour plus de détails.",
-    "q8": "Fournissez-vous un support technique?",
-    "a8": "Oui, notre équipe compétente est disponible pour fournir un support technique et répondre à toutes vos questions."
+    "faqItems": {
+      "q1": "Quels types de moteurs importez-vous?",
+      "a1": "Nous importons divers types de moteurs y compris les moteurs essence, diesel et hybrides de sources européennes réputées incluant la France, la Belgique, l'Allemagne, l'Italie et l'Espagne.",
+      "q2": "Offrez-vous des services d'installation?",
+      "a2": "Oui, nous fournissons des services professionnels d'installation de moteur dans notre atelier mécanique. Nos techniciens expérimentés assurent une installation et des tests appropriés.",
+      "q3": "Quelle est votre politique de garantie?",
+      "a3": "Nous offrons une couverture de garantie sur nos moteurs et pièces. Les conditions de garantie varient selon le type de pièce. Contactez-nous pour les détails spécifiques.",
+      "q4": "Combien de temps prend l'expédition?",
+      "a4": "Les délais d'expédition varient selon le pays d'origine et la disponibilité. Généralement, les commandes d'Europe prennent 2 à 4 semaines. Nous fournissons des délais estimés pour chaque commande.",
+      "q5": "Expédiez-vous vers d'autres pays?",
+      "a5": "Oui, nous servons plusieurs pays dont la Tunisie, l'Algérie, le Maroc et d'autres. Contactez-nous pour vérifier si nous expédions vers votre localisation.",
+      "q6": "Comment puis-je suivre ma commande?",
+      "a6": "Une fois votre commande expédiée, nous vous fournissons des informations de suivi pour surveiller l'avancement de votre envoi.",
+      "q7": "Quels modes de paiement acceptez-vous?",
+      "a7": "Nous acceptons divers modes de paiement y compris les virements bancaires, les espèces et les options de paiement mobile. Contactez-nous pour plus de détails.",
+      "q8": "Fournissez-vous un support technique?",
+      "a8": "Oui, notre équipe compétente est disponible pour fournir un support technique et répondre à toutes vos questions sur nos produits et services."
+    }
   },
   "contact": {
     "title": "Contactez-nous",
@@ -170,7 +239,8 @@
     "namePlaceholder": "Votre nom complet",
     "emailPlaceholder": "votre@email.com",
     "phonePlaceholder": "+216 XX XXX XXX",
-    "messagePlaceholder": "Comment pouvons-nous vous aider?"
+    "messagePlaceholder": "Comment pouvons-nous vous aider?",
+    "imageError": "Illustration indisponible"
   },
   "footer": {
     "about": "À Propos de Mallouka Motors",
@@ -184,9 +254,20 @@
     "contact": "Contact",
     "followUs": "Suivez-nous",
     "hours": "Heures d'Ouverture",
-    "weekdays": "Lundi - Samedi",
+    "weekdays": "Lundi - Vendredi",
+    "saturday": "Samedi",
     "sunday": "Dimanche",
     "closed": "Fermé",
     "rights": "Tous droits réservés."
+  },
+  "errors": {
+    "title": "Une erreur s'est produite",
+    "description": "Nous nous excusons pour la gêne occasionnée. Une erreur inattendue s'est produite. Veuillez réessayer.",
+    "retry": "Réessayer"
+  },
+  "notFound": {
+    "title": "Page Non Trouvée",
+    "description": "La page que vous recherchez a peut-être été supprimée, renommée, ou est temporairement indisponible.",
+    "backHome": "Retour à l'Accueil"
   }
 }

@@ -10,11 +10,11 @@ export const Footer = () => {
   const t = useTranslations("footer");
 
   const quickLinks = [
-    { name: t("homeLink") || "Home", href: "#hero" },
-    { name: t("aboutLink") || "About", href: "#about" },
-    { name: t("servicesLink") || "Services", href: "#services" },
-    { name: t("brandsLink") || "Brands", href: "#brands" },
-    { name: t("contactLink") || "Contact", href: "#contact" },
+    { name: t("homeLink"), href: "#hero" },
+    { name: t("aboutLink"), href: "#about" },
+    { name: t("servicesLink"), href: "#services" },
+    { name: t("brandsLink"), href: "#brands" },
+    { name: t("contactLink"), href: "#contact" },
   ];
 
   const socialLinks = [
@@ -111,16 +111,16 @@ export const Footer = () => {
           {/* Company Hours */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-6">
-              {t("hours") || "Business Hours"}
+              {t("hours")}
             </h3>
             <div className="space-y-3">
               <div className="flex justify-between text-sm">
-                <span className="text-slate-400">{t("weekdays") || "Monday - Saturday"}</span>
-                <span className="text-slate-300 font-medium">8:00 - 18:00</span>
+                <span className="text-slate-400">{t("weekdays")}</span>
+                <span className="text-slate-300 font-medium">8:30 - 17:30</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-slate-400">{t("sunday") || "Sunday"}</span>
-                <span className="text-slate-300 font-medium">{t("closed") || "Closed"}</span>
+                <span className="text-slate-400">{t("saturday")}</span>
+                <span className="text-slate-300 font-medium">8:30 - 15:30</span>
               </div>
             </div>
           </div>

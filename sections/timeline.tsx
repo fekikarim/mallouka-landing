@@ -44,10 +44,10 @@ export const Timeline = () => {
                           {item.year}
                         </span>
                         <h3 className="text-2xl font-bold text-white mb-3">
-                          {item.title}
+                          {t(`timelineItems.title${item.year}`)}
                         </h3>
                         <p className="text-slate-400 leading-relaxed">
-                          {item.description}
+                          {t(`timelineItems.desc${item.year}`)}
                         </p>
                       </div>
                     </GlowCard>

@@ -2,7 +2,7 @@ export const brandsData = [
   { id: 1, name: "Alfa Romeo", logo: "/assets/car-models/Alfa_Romeo.svg", country: "Italy" },
   { id: 2, name: "Audi", logo: "/assets/car-models/Audi.png", country: "Germany" },
   { id: 3, name: "BMW", logo: "/assets/car-models/BMW.svg", country: "Germany" },
-  { id: 4, name: "Chevrolet", logo: "/assets/car-models/Chevrolet.svg", country: "USA" },
+  { id: 4, name: "Chevrolet", logo: "/assets/car-models/330px-Chevrolet_simple_logo.svg.webp", country: "USA" },
   { id: 5, name: "Citroën", logo: "/assets/car-models/Citröen.svg", country: "France" },
   { id: 6, name: "Dacia", logo: "/assets/car-models/Dacia.svg", country: "Romania" },
   { id: 7, name: "Fiat", logo: "/assets/car-models/FIAT.svg", country: "Italy" },

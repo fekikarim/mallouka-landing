@@ -32,7 +32,7 @@ export const Gallery = () => {
                 {item.type === "image" ? (
                   <Image
                     src={item.src}
-                    alt={item.alt}
+                    alt={t(`galleryItems.item${item.id}Alt`)}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -55,7 +55,7 @@ export const Gallery = () => {
 
                 <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <div className="flex items-center justify-between">
-                    <span className="text-white font-medium">{item.title}</span>
+                    <span className="text-white font-medium">{t(`galleryItems.item${item.id}Title`)}</span>
                     <ZoomIn className="w-5 h-5 text-primary-400" />
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export const Gallery = () => {
               {selectedItem.type === "image" ? (
                 <Image
                   src={selectedItem.src}
-                  alt={selectedItem.alt}
+                   alt={t(`galleryItems.item${selectedItem.id}Alt`)}
                   width={1200}
                   height={800}
                   className="rounded-2xl w-full h-auto max-h-[85vh] object-contain"
