@@ -3,12 +3,12 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/seo/constants";
+import { buildMetadata } from "@/lib/seo/metadata";
 import "../globals.css";
 
-const locales = ["fr", "en", "ar"];
-
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return SUPPORTED_LOCALES.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -16,34 +16,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "metadata" });
 
-  return {
+  return buildMetadata({
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
-    icons: {
-      icon: "/assets/logo/mallouka_motors_logo.svg",
-    },
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      type: "website",
-      locale: locale,
-      siteName: "Mallouka Motors",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-    },
-    alternates: {
-      canonical: `https://malloukamotors.com/${locale}`,
-      languages: {
-        en: "https://malloukamotors.com/en",
-        fr: "https://malloukamotors.com/fr",
-        ar: "https://malloukamotors.com/ar",
-      },
-    },
-  };
+    locale: locale as SupportedLocale,
+  });
 }
 
 export default async function LocaleLayout({
@@ -55,7 +33,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   
-  if (!locales.includes(locale as any)) notFound();
+  if (!SUPPORTED_LOCALES.includes(locale as SupportedLocale)) notFound();
 
   setRequestLocale(locale);
 

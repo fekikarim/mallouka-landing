@@ -228,8 +228,30 @@
       "item5Text": "Great experience from start to finish. The team was knowledgeable and helped me choose the right parts for my vehicle.",
       "item6Name": "Fatima Zahra",
       "item6Location": "Casablanca, Morocco",
-      "item6Text": "Very professional and knowledgeable staff. They provided excellent guidance on which engine would be best for my car."
-    }
+      "item6Text": "Very professional and knowledgeable staff. They provided excellent guidance on which engine would be best for my car.",
+      "item7Name": "Omar Krichen",
+      "item7Location": "Paris, France",
+      "item7Text": "I have been a loyal customer of Mallouka Motors for years. My father shares a great relationship with the owner, Majdi Feki, and I do too. I bought several articles for my Audi, and the quality is always excellent.",
+      "item8Name": "Ghazi",
+      "item8Location": "Tunis, Tunisia",
+      "item8Text": "I love buying from Mallouka Motors! They always have exactly what I need for my Renault Express van. Great service and reliable parts every time.",
+      "item9Name": "Thomas Rueda",
+      "item9Location": "Toulouse, France",
+      "item9Text": "A big thank you to Majdi, the owner, for this great collaboration and his excellent behavior throughout. It is always a pleasure doing business with him.",
+      "item10Name": "Nicolas Seguier",
+      "item10Location": "Toulouse, France",
+      "item10Text": "I would like to express my sincere gratitude to Majdi, the owner of Mallouka Motors, for his professionalism, integrity, and the outstanding quality of our collaboration. His team is serious, responsive, and delivers exactly what was promised. A partner I highly recommend.",
+      "item11Name": "Karim Ncir",
+      "item11Location": "Sfax, Tunisia",
+      "item11Text": "It has been a pleasure working with Majdi at Mallouka Motors. Professional, honest, and always available to help. I look forward to our next collaboration.",
+      "item12Name": "Hbib Badri",
+      "item12Location": "Tunis, Tunisia",
+      "item12Text": "Working with Mallouka Motors has been a great experience. They are so professional and the collaboration is always smooth from start to finish."
+    },
+    "errorTitle": "Unable to Load Testimonials",
+    "retry": "Try Again",
+    "emptyTitle": "No Testimonials Found",
+    "emptyDesc": "Testimonials are currently unavailable. Please check back soon."
   },
   "team": {
     "title": "Our Team",

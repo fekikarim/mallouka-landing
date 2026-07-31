@@ -1,32 +1,12 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+
+import { SITE_URL, SUPPORTED_LOCALES } from "@/lib/seo/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://malloukamotors.com";
-
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/en`,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/fr`,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/ar`,
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.9,
-    },
-  ];
+  return SUPPORTED_LOCALES.map((locale) => ({
+    url: `${SITE_URL}/${locale}`,
+    lastModified: new Date(),
+    changeFrequency: "daily",
+    priority: locale === "fr" ? 1 : 0.9,
+  }));
 }
