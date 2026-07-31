@@ -1,112 +1,235 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useCallback, useMemo, useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { ScrollReveal } from "../animations/scroll-reveal";
+import { AlertTriangle, RefreshCw, Images, Clapperboard } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
 import { GlowOrb } from "@/components/ui/glow-orb";
-import { galleryData } from "@/data/gallery";
-import Image from "next/image";
-import { X, Play, ZoomIn } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { GalleryCard } from "@/components/ui/gallery-card";
+import { GalleryLightbox } from "@/components/ui/gallery-lightbox";
+import { GalleryLoadingGrid } from "@/components/ui/gallery-card-skeleton";
+import { galleryData, galleryCategories } from "@/data/gallery";
+import type { GalleryItem, GalleryCategory } from "@/data/gallery";
+
+const validateGalleryData = (
+  data: typeof galleryData
+): { valid: typeof galleryData; errors: string[] } => {
+  const errors: string[] = [];
+  const valid = data.filter((item, index) => {
+    if (!item.id && item.id !== 0) {
+      errors.push(`Gallery item at index ${index}: missing id`);
+      return false;
+    }
+    if (!item.title || typeof item.title !== "string") {
+      errors.push(`Gallery item ${item.id}: invalid title`);
+      return false;
+    }
+    if (item.type !== "image" && item.type !== "video") {
+      errors.push(`Gallery item ${item.id}: invalid type "${item.type}"`);
+      return false;
+    }
+    if (!item.src || typeof item.src !== "string") {
+      errors.push(`Gallery item ${item.id}: missing src`);
+      return false;
+    }
+    if (
+      !galleryCategories.includes(item.category as GalleryCategory)
+    ) {
+      errors.push(`Gallery item ${item.id}: invalid category "${item.category}"`);
+      return false;
+    }
+    return true;
+  });
+
+  return { valid, errors };
+};
 
 export const Gallery = () => {
   const t = useTranslations("gallery");
-  const [selectedItem, setSelectedItem] = useState<(typeof galleryData)[0] | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [items, setItems] = useState<typeof galleryData>([]);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] =
+    useState<GalleryCategory>("all");
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
+
+  const loadGallery = useCallback(() => {
+    setIsLoading(true);
+    setLoadError(null);
+
+    try {
+      const { valid, errors } = validateGalleryData(galleryData);
+
+      if (errors.length > 0) {
+        console.warn("[Gallery] Validation warnings:", errors);
+      }
+
+      if (valid.length === 0) {
+        setLoadError("No valid gallery items available");
+        setItems([]);
+        return;
+      }
+
+      setItems(valid);
+    } catch (err) {
+      console.error("[Gallery] Failed to load gallery data:", err);
+      setLoadError(
+        err instanceof Error ? err.message : "An unexpected error occurred"
+      );
+      setItems([]);
+    } finally {
+      const timer = setTimeout(() => setIsLoading(false), 400);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(loadGallery, 300);
+    return () => clearTimeout(timer);
+  }, [loadGallery]);
+
+  const handleRetry = useCallback(() => {
+    loadGallery();
+  }, [loadGallery]);
+
+  const filteredItems = useMemo(
+    () =>
+      activeCategory === "all"
+        ? items
+        : items.filter((item) => item.category === activeCategory),
+    [items, activeCategory]
+  );
+
+  const getItemTitle = useCallback(
+    (item: GalleryItem) => t(`galleryItems.${item.title}Title`),
+    [t]
+  );
 
   return (
-    <section id="gallery" className="py-24 bg-slate-950 relative overflow-hidden gradient-top-border">
+    <section
+      id="gallery"
+      className="py-24 bg-slate-950 relative overflow-hidden gradient-top-border"
+    >
       <GlowOrb color="primary" size="md" className="top-1/4 -left-32 opacity-30" />
       <GlowOrb color="blue" size="sm" className="bottom-1/4 right-1/4" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 relative z-10">
         <SectionHeader title={t("title")} subtitle={t("subtitle")} dark />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {galleryData.map((item, index) => (
-            <ScrollReveal key={item.id} delay={index * 0.1}>
-              <div
-                className="relative aspect-video rounded-2xl overflow-hidden cursor-pointer group border border-slate-800/50 hover:border-primary-500/30 transition-all duration-500"
-                onClick={() => setSelectedItem(item)}
+        {/* Category filters */}
+        {!isLoading && !loadError && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-10 md:mb-14"
+          >
+            {galleryCategories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-5 md:px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
+                  activeCategory === category
+                    ? "bg-gradient-to-r from-primary-500 to-blue-500 text-white border-transparent shadow-glow-sm"
+                    : "bg-slate-900/50 text-slate-400 border-slate-700/50 hover:text-white hover:border-primary-500/40"
+                }`}
               >
-                {item.type === "image" ? (
-                  <Image
-                    src={item.src}
-                    alt={t(`galleryItems.item${item.id}Alt`)}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
+                {category === "videos" ? (
+                  <span className="inline-flex items-center gap-2">
+                    <Clapperboard className="w-4 h-4" />
+                    {t(`categories.${category}`)}
+                  </span>
                 ) : (
-                  <div className="relative w-full h-full bg-slate-900">
-                    <video
-                      src={item.src}
-                      className="w-full h-full object-cover"
-                      muted
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-primary-500/80 flex items-center justify-center shadow-glow backdrop-blur-sm">
-                        <Play className="w-7 h-7 text-white ml-1" />
-                      </div>
-                    </div>
-                  </div>
+                  t(`categories.${category}`)
                 )}
+              </button>
+            ))}
+          </motion.div>
+        )}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <div className="flex items-center justify-between">
-                    <span className="text-white font-medium">{t(`galleryItems.item${item.id}Title`)}</span>
-                    <ZoomIn className="w-5 h-5 text-primary-400" />
-                  </div>
-                </div>
+        <AnimatePresence mode="wait">
+          {isLoading ? (
+            <motion.div
+              key="loading"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <GalleryLoadingGrid />
+            </motion.div>
+          ) : loadError ? (
+            <motion.div
+              key="error"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="flex flex-col items-center justify-center py-16 text-center"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-red-500/10 flex items-center justify-center mb-4">
+                <AlertTriangle className="w-8 h-8 text-red-400" />
               </div>
-            </ScrollReveal>
-          ))}
-        </div>
+              <h3 className="text-lg font-semibold text-white mb-2">
+                {t("errorTitle")}
+              </h3>
+              <p className="text-slate-400 mb-6 max-w-md">{loadError}</p>
+              <button
+                onClick={handleRetry}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary-500 to-blue-500 hover:from-primary-600 hover:to-blue-600 text-white font-medium transition-all duration-300 shadow-glow-sm hover:shadow-glow"
+              >
+                <RefreshCw className="w-4 h-4" />
+                {t("retry")}
+              </button>
+            </motion.div>
+          ) : filteredItems.length === 0 ? (
+            <motion.div
+              key="empty"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex flex-col items-center justify-center py-16 text-center"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-slate-800 flex items-center justify-center mb-4">
+                <Images className="w-8 h-8 text-slate-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">
+                {t("emptyTitle")}
+              </h3>
+              <p className="text-slate-400">{t("emptyDesc")}</p>
+            </motion.div>
+          ) : (
+            <motion.div
+              key={`grid-${activeCategory}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+            >
+              {filteredItems.map((item, index) => (
+                <GalleryCard
+                  key={item.id}
+                  item={item}
+                  title={getItemTitle(item)}
+                  index={index}
+                  onClick={setSelectedItem}
+                />
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <AnimatePresence>
         {selectedItem && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedItem(null)}
-          >
-            <motion.button
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              className="absolute top-6 right-6 w-12 h-12 rounded-full bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 flex items-center justify-center text-white hover:bg-primary-500/80 transition-colors"
-              onClick={() => setSelectedItem(null)}
-            >
-              <X className="w-6 h-6" />
-            </motion.button>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              className="relative max-w-5xl max-h-[90vh] w-full"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {selectedItem.type === "image" ? (
-                <Image
-                  src={selectedItem.src}
-                   alt={t(`galleryItems.item${selectedItem.id}Alt`)}
-                  width={1200}
-                  height={800}
-                  className="rounded-2xl w-full h-auto max-h-[85vh] object-contain"
-                />
-              ) : (
-                <video
-                  src={selectedItem.src}
-                  controls
-                  className="rounded-2xl w-full max-h-[85vh]"
-                />
-              )}
-            </motion.div>
-          </motion.div>
+          <GalleryLightbox
+            items={filteredItems}
+            current={selectedItem}
+            title={getItemTitle(selectedItem)}
+            onClose={() => setSelectedItem(null)}
+            onNavigate={setSelectedItem}
+          />
         )}
       </AnimatePresence>
     </section>

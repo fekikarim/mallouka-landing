@@ -160,18 +160,52 @@
   "gallery": {
     "title": "Gallery",
     "subtitle": "Our Facilities and Work",
+    "categories": {
+      "all": "All",
+      "exterior": "Exterior",
+      "interior": "Interior",
+      "videos": "Videos"
+    },
     "galleryItems": {
-      "item1Title": "Exterior View",
-      "item1Alt": "Mallouka Motors exterior view",
-      "item2Title": "Interior Workshop",
-      "item2Alt": "Mallouka Motors interior view",
-      "item3Title": "Office Entrance",
-      "item3Alt": "Mallouka Motors office entrance",
-      "item4Title": "Outdoor Area",
-      "item4Alt": "Mallouka Motors outdoor area",
-      "item5Title": "Video Tour",
-      "item5Alt": "Mallouka Motors interior video tour"
-    }
+      "exteriorTitle": "Store Exterior",
+      "exteriorAlt": "Mallouka Motors exterior view",
+      "interiorTitle": "Workshop Interior",
+      "interiorAlt": "Mallouka Motors interior view",
+      "officeTitle": "Office Entrance",
+      "officeAlt": "Mallouka Motors office entrance",
+      "outdoorTitle": "Outdoor Area",
+      "outdoorAlt": "Mallouka Motors outdoor area",
+      "videoTitle": "Interior Video Tour",
+      "videoAlt": "Mallouka Motors interior video tour",
+      "enginesExteriorTitle": "Engines Store Exterior",
+      "enginesExteriorAlt": "Mallouka Motors engines store exterior",
+      "enginesBoardTitle": "Store Signage",
+      "enginesBoardAlt": "Mallouka Motors engines store signage board",
+      "enginesCloseupTitle": "Facade Close-Up",
+      "enginesCloseupAlt": "Mallouka Motors engines store close-up view",
+      "enginesDoorTitle": "Store Entrance Door",
+      "enginesDoorAlt": "Mallouka Motors engines store entrance door",
+      "enginesTitleTitle": "Store Signboard",
+      "enginesTitleAlt": "Mallouka Motors engines store title signage",
+      "enginesWideTitle": "Store Panorama",
+      "enginesWideAlt": "Mallouka Motors engines store wide exterior view",
+      "enginesInteriorTitle": "Engines Showroom",
+      "enginesInteriorAlt": "Mallouka Motors engines store interior",
+      "electricCardsTitle": "Electrical Cards",
+      "electricCardsAlt": "Mallouka Motors electrical cards display",
+      "video1Title": "Engines Store Tour",
+      "video1Alt": "Mallouka Motors engines store tour video 1",
+      "video2Title": "Engines Store Tour 2",
+      "video2Alt": "Mallouka Motors engines store tour video 2",
+      "video3Title": "Engines Store Tour 3",
+      "video3Alt": "Mallouka Motors engines store tour video 3",
+      "video4Title": "Engines Store Tour 4",
+      "video4Alt": "Mallouka Motors engines store tour video 4"
+    },
+    "errorTitle": "Unable to Load Gallery",
+    "retry": "Try Again",
+    "emptyTitle": "No Items Found",
+    "emptyDesc": "No gallery items are available in this category."
   },
   "testimonials": {
     "title": "What Our Customers Say",
@@ -196,6 +230,21 @@
       "item6Location": "Casablanca, Morocco",
       "item6Text": "Very professional and knowledgeable staff. They provided excellent guidance on which engine would be best for my car."
     }
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "The People Behind Mallouka Motors",
+    "roles": {
+      "owner": "Founder & Owner",
+      "manager": "General Manager"
+    },
+    "call": "Call Now",
+    "whatsapp": "WhatsApp",
+    "imageError": "Photo unavailable",
+    "errorTitle": "Unable to Load Team",
+    "retry": "Try Again",
+    "emptyTitle": "No Team Members Found",
+    "emptyDesc": "Team information is currently unavailable."
   },
   "faq": {
     "title": "Frequently Asked Questions",

@@ -9,6 +9,7 @@ import { WhyChoose } from "@/sections/why-choose";
 import { Workshop } from "@/sections/workshop";
 import { Gallery } from "@/sections/gallery";
 import { Testimonials } from "@/sections/testimonials";
+import { Team } from "@/sections/team";
 import { FAQ } from "@/sections/faq";
 import { Contact } from "@/sections/contact";
 import { Maps } from "@/sections/maps";
@@ -27,6 +28,7 @@ export default function HomePage() {
       <Workshop />
       <Gallery />
       <Testimonials />
+      <Team />
       <FAQ />
       <Contact />
       <Maps />

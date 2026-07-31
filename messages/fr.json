@@ -160,18 +160,52 @@
   "gallery": {
     "title": "Galerie",
     "subtitle": "Nos Installations et Notre Travail",
+    "categories": {
+      "all": "Tout",
+      "exterior": "Extérieur",
+      "interior": "Intérieur",
+      "videos": "Vidéos"
+    },
     "galleryItems": {
-      "item1Title": "Vue Extérieure",
-      "item1Alt": "Vue extérieure de Mallouka Motors",
-      "item2Title": "Atelier Intérieur",
-      "item2Alt": "Vue intérieure de Mallouka Motors",
-      "item3Title": "Entrée du Bureau",
-      "item3Alt": "Entrée du bureau de Mallouka Motors",
-      "item4Title": "Espace Extérieur",
-      "item4Alt": "Espace extérieur de Mallouka Motors",
-      "item5Title": "Visite Vidéo",
-      "item5Alt": "Visite vidéo intérieure de Mallouka Motors"
-    }
+      "exteriorTitle": "Extérieur du Magasin",
+      "exteriorAlt": "Vue extérieure de Mallouka Motors",
+      "interiorTitle": "Atelier Intérieur",
+      "interiorAlt": "Vue intérieure de Mallouka Motors",
+      "officeTitle": "Entrée du Bureau",
+      "officeAlt": "Entrée du bureau de Mallouka Motors",
+      "outdoorTitle": "Espace Extérieur",
+      "outdoorAlt": "Espace extérieur de Mallouka Motors",
+      "videoTitle": "Visite Vidéo Intérieure",
+      "videoAlt": "Visite vidéo intérieure de Mallouka Motors",
+      "enginesExteriorTitle": "Extérieur du Magasin de Moteurs",
+      "enginesExteriorAlt": "Extérieur du magasin de moteurs de Mallouka Motors",
+      "enginesBoardTitle": "Panneau du Magasin",
+      "enginesBoardAlt": "Panneau d'enseigne du magasin de moteurs de Mallouka Motors",
+      "enginesCloseupTitle": "Façade en Gros Plan",
+      "enginesCloseupAlt": "Vue en gros plan du magasin de moteurs de Mallouka Motors",
+      "enginesDoorTitle": "Porte d'Entrée du Magasin",
+      "enginesDoorAlt": "Porte d'entrée du magasin de moteurs de Mallouka Motors",
+      "enginesTitleTitle": "Enseigne du Magasin",
+      "enginesTitleAlt": "Enseigne du magasin de moteurs de Mallouka Motors",
+      "enginesWideTitle": "Panorama du Magasin",
+      "enginesWideAlt": "Vue panoramique du magasin de moteurs de Mallouka Motors",
+      "enginesInteriorTitle": "Showroom de Moteurs",
+      "enginesInteriorAlt": "Intérieur du magasin de moteurs de Mallouka Motors",
+      "electricCardsTitle": "Cartes Électriques",
+      "electricCardsAlt": "Présentation des cartes électriques de Mallouka Motors",
+      "video1Title": "Visite du Magasin de Moteurs",
+      "video1Alt": "Vidéo de visite du magasin de moteurs de Mallouka Motors 1",
+      "video2Title": "Visite du Magasin de Moteurs 2",
+      "video2Alt": "Vidéo de visite du magasin de moteurs de Mallouka Motors 2",
+      "video3Title": "Visite du Magasin de Moteurs 3",
+      "video3Alt": "Vidéo de visite du magasin de moteurs de Mallouka Motors 3",
+      "video4Title": "Visite du Magasin de Moteurs 4",
+      "video4Alt": "Vidéo de visite du magasin de moteurs de Mallouka Motors 4"
+    },
+    "errorTitle": "Impossible de Charger la Galerie",
+    "retry": "Réessayer",
+    "emptyTitle": "Aucun Élément Trouvé",
+    "emptyDesc": "Aucun élément de galerie n'est disponible dans cette catégorie."
   },
   "testimonials": {
     "title": "Ce Que Disent Nos Clients",
@@ -196,6 +230,21 @@
       "item6Location": "Casablanca, Maroc",
       "item6Text": "Personnel très professionnel et compétent. Ils ont fourni d'excellents conseils sur le moteur le plus adapté à ma voiture."
     }
+  },
+  "team": {
+    "title": "Notre Équipe",
+    "subtitle": "Les Visages Derrière Mallouka Motors",
+    "roles": {
+      "owner": "Fondateur & Propriétaire",
+      "manager": "Directeur Général"
+    },
+    "call": "Appeler",
+    "whatsapp": "WhatsApp",
+    "imageError": "Photo indisponible",
+    "errorTitle": "Impossible de Charger l'Équipe",
+    "retry": "Réessayer",
+    "emptyTitle": "Aucun Membre Trouvé",
+    "emptyDesc": "Les informations sur l'équipe sont actuellement indisponibles."
   },
   "faq": {
     "title": "Questions Fréquentes",
