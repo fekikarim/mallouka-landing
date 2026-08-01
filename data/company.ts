@@ -23,6 +23,7 @@ export const companyData = {
     facebook: "https://www.facebook.com/profile.php?id=61575520461848",
     instagram: "https://www.instagram.com/allo.casse.auto.tn/",
     linkedin: "https://www.linkedin.com/company/mallouka-motors",
+    tiktok: "https://www.tiktok.com/@allo.casse.auto.tn",
   },
   developer: {
     name: "Karim Feki",

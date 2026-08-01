@@ -3,6 +3,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { TikTokIcon } from "@/components/ui/tiktok-icon";
 import { companyData } from "@/data/company";
 import Image from "next/image";
 
@@ -20,6 +21,7 @@ export const Footer = () => {
   const socialLinks = [
     { icon: Facebook, href: companyData.socialMedia.facebook, label: "Facebook" },
     { icon: Instagram, href: companyData.socialMedia.instagram, label: "Instagram" },
+    { icon: TikTokIcon, href: companyData.socialMedia.tiktok, label: "TikTok" },
     { icon: Linkedin, href: companyData.socialMedia.linkedin, label: "LinkedIn" },
   ];
 
