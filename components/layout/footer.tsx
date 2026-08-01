@@ -127,13 +127,29 @@ export const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-slate-800/50 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-sm">
-            &copy; {new Date().getFullYear()} {companyData.name}. {t("rights")}
-          </p>
-          <p className="text-slate-600 text-xs">
-            {companyData.formerName}
-          </p>
+        <div className="border-t border-slate-800/50 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+            <p className="text-slate-500 text-sm">
+              &copy; {new Date().getFullYear()} {companyData.name}. {t("rights")}
+            </p>
+            <p className="text-slate-600 text-xs">
+              {companyData.formerName}
+            </p>
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-slate-800/30 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <span className="text-slate-500 text-sm">{t("developedBy")}</span>
+            <a
+              href={companyData.developer.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/50 text-sm font-medium text-slate-300 hover:text-primary-300 hover:border-primary-500/40 hover:bg-slate-800 hover:shadow-glow-sm transition-all duration-300"
+              aria-label={`${companyData.developer.name} - LinkedIn`}
+            >
+              <Linkedin className="w-4 h-4 text-primary-400 group-hover:scale-110 transition-transform duration-300" />
+              {companyData.developer.name}
+            </a>
+          </div>
         </div>
       </div>
     </footer>

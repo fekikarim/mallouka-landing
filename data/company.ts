@@ -20,8 +20,12 @@ export const companyData = {
     },
   ],
   socialMedia: {
-    facebook: "#",
-    instagram: "#",
-    linkedin: "#",
+    facebook: "https://www.facebook.com/profile.php?id=61575520461848",
+    instagram: "https://www.instagram.com/allo.casse.auto.tn/",
+    linkedin: "https://www.linkedin.com/company/mallouka-motors",
+  },
+  developer: {
+    name: "Karim Feki",
+    linkedin: "https://www.linkedin.com/in/karimfeki/",
   },
 };

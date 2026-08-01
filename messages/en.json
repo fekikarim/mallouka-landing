@@ -311,7 +311,8 @@
     "saturday": "Saturday",
     "sunday": "Sunday",
     "closed": "Closed",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "developedBy": "Website designed and developed by"
   },
   "errors": {
     "title": "Something went wrong",

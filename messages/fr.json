@@ -311,7 +311,8 @@
     "saturday": "Samedi",
     "sunday": "Dimanche",
     "closed": "Fermé",
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "developedBy": "Site web conçu et développé par"
   },
   "errors": {
     "title": "Une erreur s'est produite",
