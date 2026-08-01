@@ -124,6 +124,7 @@ export const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
             controls
             autoPlay
             playsInline
+            preload="none"
             onError={() => setMediaError(true)}
             className="rounded-2xl w-full max-h-[85vh] bg-slate-900"
           />

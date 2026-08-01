@@ -31,7 +31,7 @@ export const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-blue-500/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700" />
                 <div className="relative rounded-3xl overflow-hidden border border-slate-700/50 shadow-glass">
                   <Image
-                    src="/assets/components/auto-service-illustration.png"
+                    src="/assets/components/auto-service-illustration.avif"
                     alt="Mallouka Motors Service"
                     width={600}
                     height={500}

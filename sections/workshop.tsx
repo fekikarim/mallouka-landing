@@ -37,7 +37,7 @@ export const Workshop = () => {
                 <div className="relative rounded-3xl overflow-hidden border border-slate-700/50 shadow-glass">
                   <div className="relative w-full aspect-[4/3]">
                     <Image
-                      src="/assets/components/auto-diagnostics.jpg"
+                      src="/assets/components/auto-diagnostics.avif"
                       alt="Mallouka Motors Workshop"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"

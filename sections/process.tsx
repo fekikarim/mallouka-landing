@@ -60,7 +60,7 @@ export const Process = () => {
                 <div className="relative rounded-3xl overflow-hidden border border-slate-800/50 shadow-glass">
                   <div className="relative w-full aspect-[4/3]">
                     <Image
-                      src="/assets/components/roadside-service-illustration.png"
+                      src="/assets/components/roadside-service-illustration.avif"
                       alt="Roadside Service"
                       fill
                       sizes="400px"

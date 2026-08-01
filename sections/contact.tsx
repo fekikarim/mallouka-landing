@@ -67,7 +67,7 @@ export const Contact = () => {
                       </div>
                     ) : (
                       <Image
-                        src="/assets/components/auto-repair-advice-illustration.png"
+                        src="/assets/components/auto-repair-advice-illustration.avif"
                         alt="Auto Repair Advice"
                         width={600}
                         height={500}

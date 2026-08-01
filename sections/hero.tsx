@@ -89,17 +89,19 @@ export const Hero = () => {
 
           {/* Image Showcase */}
           <motion.div
-            initial={{ opacity: 0, x: 50, scale: 0.9 }}
+            initial={{ opacity: 0.6, x: 40, scale: 0.96 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             className="relative lg:h-[600px] flex items-center justify-center"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/10 to-transparent rounded-full blur-3xl" />
             <div className="relative w-full h-[400px] lg:h-full group">
               <Image
-                src="/assets/components/auto-service.png"
+                src="/assets/components/auto-service.avif"
                 alt="Auto Service"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                fetchPriority="high"
                 className="object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
                 priority
               />
