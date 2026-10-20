@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { MallloukaLogoIcon } from "@/components/ui/mallouka-logo-icon";
 
 export const Navbar = () => {
   const t = useTranslations("nav");
@@ -65,20 +65,10 @@ export const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center relative group">
             <div className="absolute inset-0 bg-primary-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            <div
-              className="h-12 w-44 relative z-10 bg-[#47a7e3] drop-shadow-[0_0_12px_rgba(71,167,227,0.6)]"
-              style={{
-                maskImage: 'url("/assets/logo/mallouka-motors-logo-transparent.svg")',
-                WebkitMaskImage: 'url("/assets/logo/mallouka-motors-logo-transparent.svg")',
-                maskRepeat: "no-repeat",
-                WebkitMaskRepeat: "no-repeat",
-                maskSize: "contain",
-                WebkitMaskSize: "contain",
-                maskPosition: "left center",
-                WebkitMaskPosition: "left center",
-              }}
+            <MallloukaLogoIcon
+              color="#47a7e3"
+              className="h-12 w-auto relative z-10 drop-shadow-[0_0_12px_rgba(71,167,227,0.5)] transition-all duration-300 group-hover:drop-shadow-[0_0_18px_rgba(71,167,227,0.8)]"
               aria-label="Mallouka Motors"
-              role="img"
             />
           </div>
 

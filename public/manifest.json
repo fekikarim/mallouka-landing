@@ -1,0 +1,28 @@
+{
+  "name": "Mallouka Motors | Allo Casse Auto",
+  "short_name": "Mallouka Motors",
+  "description": "Moteurs Importés et Pièces Automobiles de Haute Qualité en Tunisie Depuis 2003",
+  "start_url": "/fr",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "categories": ["automotive", "shopping", "business"],
+  "lang": "fr",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

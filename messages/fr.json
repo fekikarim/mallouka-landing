@@ -323,5 +323,13 @@
     "title": "Page Non Trouvée",
     "description": "La page que vous recherchez a peut-être été supprimée, renommée, ou est temporairement indisponible.",
     "backHome": "Retour à l'Accueil"
+  },
+  "offline": {
+    "title": "Mode Hors Ligne",
+    "subtitle": "Vous êtes actuellement hors ligne. Mallouka Motors reste joignable par téléphone ou WhatsApp.",
+    "retry": "Vérifier la connexion",
+    "emergencyTitle": "Assistance Téléphonique Directe",
+    "workshop": "Atelier Mécanique",
+    "parts": "Moteurs & Pièces de Rechange"
   }
 }

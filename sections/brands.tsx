@@ -1,11 +1,54 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
+import React, { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { brandsData } from "@/data/brands";
 import { SectionHeader } from "@/components/ui/section-header";
 import { GlowOrb } from "@/components/ui/glow-orb";
+
+interface BrandItemProps {
+  brand: (typeof brandsData)[0];
+  priority?: boolean;
+}
+
+const BrandLogo: React.FC<BrandItemProps> = ({ brand, priority = false }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    if (imgRef.current && imgRef.current.complete) {
+      setIsLoaded(true);
+    }
+  }, [brand.logo]);
+
+  if (hasError) {
+    return (
+      <span className="px-3 py-1.5 rounded-lg bg-slate-900/40 border border-slate-800 text-xs font-semibold tracking-widest text-slate-400 group-hover/brand:text-primary-400 uppercase font-mono transition-colors">
+        {brand.name}
+      </span>
+    );
+  }
+
+  return (
+    <img
+      ref={imgRef}
+      src={brand.logo}
+      alt={brand.name}
+      width={160}
+      height={70}
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
+      onLoad={() => setIsLoaded(true)}
+      onError={() => setHasError(true)}
+      className={`max-w-[160px] max-h-[70px] w-auto h-auto object-contain brightness-0 invert transition-all duration-500 filter ${
+        isLoaded
+          ? "opacity-50 group-hover/brand:opacity-100 group-hover/brand:drop-shadow-[0_0_18px_rgba(255,255,255,0.65)]"
+          : "opacity-0"
+      }`}
+    />
+  );
+};
 
 export const Brands = () => {
   const t = useTranslations("brands");
@@ -30,15 +73,9 @@ export const Brands = () => {
           {[...brandsData, ...brandsData].map((brand, index) => (
             <div
               key={`${brand.id}-${index}`}
-              className="inline-flex items-center justify-center w-56 h-32 mx-12 transition-all duration-500 hover:scale-110 cursor-pointer"
+              className="inline-flex items-center justify-center w-52 h-24 mx-8 group/brand cursor-pointer select-none transition-transform duration-500 hover:scale-110"
             >
-              <Image
-                src={brand.logo}
-                alt={brand.name}
-                width={200}
-                height={100}
-                className="w-auto h-auto max-w-[180px] max-h-[90px] object-contain brightness-0 invert opacity-50 hover:opacity-100 hover:drop-shadow-[0_0_16px_rgba(255,255,255,0.5)] transition-all duration-500"
-              />
+              <BrandLogo brand={brand} priority={index < 8} />
             </div>
           ))}
         </div>
@@ -46,3 +83,4 @@ export const Brands = () => {
     </section>
   );
 };
+

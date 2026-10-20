@@ -50,7 +50,15 @@ export function buildMetadata(options: BuildMetadataOptions): Metadata {
     title,
     description,
     keywords,
-    icons,
+    manifest: "/manifest.json",
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "48x48" },
+        { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+        { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      ],
+      apple: [{ url: "/icon-192.png", sizes: "192x192", type: "image/png" }],
+    },
     alternates: {
       canonical,
       languages,

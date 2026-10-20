@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SUPPORTED_LOCALES, type SupportedLocale } from "@/lib/seo/constants";
 import { buildMetadata } from "@/lib/seo/metadata";
+import { PWAProvider } from "@/components/providers/pwa-provider";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -69,9 +70,11 @@ export default async function LocaleLayout({
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          {children}
-          <Footer />
+          <PWAProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </PWAProvider>
         </NextIntlClientProvider>
       </body>
     </html>

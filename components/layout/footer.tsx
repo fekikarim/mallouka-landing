@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import { TikTokIcon } from "@/components/ui/tiktok-icon";
 import { companyData } from "@/data/company";
-import Image from "next/image";
+import { MallloukaLogoIcon } from "@/components/ui/mallouka-logo-icon";
 
 export const Footer = () => {
   const t = useTranslations("footer");
@@ -33,12 +33,10 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <Image
-              src="/assets/logo/mallouka-motors-logo-transparent.svg"
-              alt="Mallouka Motors"
-              width={180}
-              height={50}
-              className="h-12 w-auto brightness-0 invert"
+            <MallloukaLogoIcon
+              color="#ffffff"
+              className="h-12 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]"
+              aria-label="Mallouka Motors"
             />
             <p className="text-slate-400 text-sm leading-relaxed">
               {t("aboutText")}

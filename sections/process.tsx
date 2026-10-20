@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "../animations/scroll-reveal";
 import { GlowCard } from "@/components/ui/glow-card";
@@ -59,10 +59,12 @@ export const Process = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/15 to-blue-500/10 rounded-3xl blur-2xl" />
                 <div className="relative rounded-3xl overflow-hidden border border-slate-800/50 shadow-glass">
                   <div className="relative w-full aspect-[4/3]">
-                    <Image
+                    <OptimizedImage
                       src="/assets/components/roadside-service-illustration.avif"
                       alt="Roadside Service"
                       fill
+                      fallbackIcon="service"
+                      fallbackText="Service d'assistance Mallouka Motors"
                       sizes="400px"
                       className="object-contain transition-transform duration-700 group-hover:scale-105 p-4"
                     />

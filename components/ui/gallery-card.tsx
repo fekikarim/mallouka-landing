@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { motion } from "framer-motion";
 import { Play, ZoomIn, ImageOff, AlertTriangle } from "lucide-react";
 import type { GalleryItem } from "@/data/gallery";
@@ -99,50 +99,34 @@ export const GalleryCard: React.FC<GalleryCardProps> = ({
         >
           {isVideo ? (
             <div className="relative w-full h-full bg-slate-900">
-              {imgError ? (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <ImageOff className="w-8 h-8 text-slate-500" />
-                  <span className="text-slate-500 text-sm">Video unavailable</span>
-                </div>
-              ) : (
-                <>
-                  {item.poster ? (
-                    <Image
-                      src={item.poster}
-                      alt={item.alt}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      onError={() => setImgError(true)}
-                    />
-                  ) : null}
-                  <div className="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/20 transition-colors duration-500" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-primary-500/80 flex items-center justify-center shadow-glow backdrop-blur-sm transition-all duration-500 group-hover:scale-110 group-hover:bg-primary-500">
-                      <Play className="w-7 h-7 text-white ml-1" />
-                    </div>
-                  </div>
-                </>
-              )}
-            </div>
-          ) : (
-            <>
-              {imgError ? (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-slate-900">
-                  <ImageOff className="w-8 h-8 text-slate-500" />
-                  <span className="text-slate-500 text-sm">Image unavailable</span>
-                </div>
-              ) : (
-                <Image
-                  src={item.src}
+              {item.poster ? (
+                <OptimizedImage
+                  src={item.poster}
                   alt={item.alt}
                   fill
+                  fallbackIcon="service"
+                  fallbackText="Vidéo Mallouka Motors"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  onError={() => setImgError(true)}
                 />
-              )}
-            </>
+              ) : null}
+              <div className="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/20 transition-colors duration-500 z-10" />
+              <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div className="w-16 h-16 rounded-full bg-primary-500/80 flex items-center justify-center shadow-glow backdrop-blur-sm transition-all duration-500 group-hover:scale-110 group-hover:bg-primary-500">
+                  <Play className="w-7 h-7 text-white ml-1" />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <OptimizedImage
+              src={item.src}
+              alt={item.alt}
+              fill
+              fallbackIcon="gear"
+              fallbackText={title}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
           )}
 
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

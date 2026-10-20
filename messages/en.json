@@ -323,5 +323,13 @@
     "title": "Page Not Found",
     "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
     "backHome": "Return to Homepage"
+  },
+  "offline": {
+    "title": "Offline Mode",
+    "subtitle": "You are currently offline. Mallouka Motors remains reachable via phone or WhatsApp.",
+    "retry": "Check connection",
+    "emergencyTitle": "Direct Phone Support",
+    "workshop": "Mechanical Workshop",
+    "parts": "Engines & Spare Parts"
   }
 }

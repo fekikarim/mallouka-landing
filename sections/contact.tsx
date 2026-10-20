@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "../animations/scroll-reveal";
 import { GlowCard } from "@/components/ui/glow-card";
@@ -58,25 +58,17 @@ export const Contact = () => {
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-blue-500/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700" />
                   <div className="relative rounded-3xl overflow-hidden border border-slate-700/50 shadow-glass bg-slate-900/50">
-                    {imgError ? (
-                      <div className="flex flex-col items-center justify-center py-20 text-center gap-4">
-                        <AlertTriangle className="w-10 h-10 text-slate-500" />
-                        <p className="text-slate-400 text-sm">
-                          {t("imageError")}
-                        </p>
-                      </div>
-                    ) : (
-                      <Image
-                        src="/assets/components/auto-repair-advice-illustration.avif"
-                        alt="Auto Repair Advice"
-                        width={600}
-                        height={500}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-                        className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                        priority={false}
-                        onError={() => setImgError(true)}
-                      />
-                    )}
+                    <OptimizedImage
+                      src="/assets/components/auto-repair-advice-illustration.avif"
+                      alt="Auto Repair Advice"
+                      width={600}
+                      height={500}
+                      fallbackIcon="service"
+                      fallbackText={t("imageError")}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                      className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                      priority={false}
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
                   </div>
                 </div>

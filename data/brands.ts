@@ -9,7 +9,7 @@ export const brandsData = [
   { id: 8, name: "Ford", logo: "/assets/car-models/Ford.svg", country: "USA" },
   { id: 9, name: "Honda", logo: "/assets/car-models/Honda.svg", country: "Japan" },
   { id: 10, name: "Hyundai", logo: "/assets/car-models/Hyundai.svg", country: "South Korea" },
-  { id: 11, name: "Jaguar", logo: "/assets/car-models/Jaguar.png", country: "UK" },
+  { id: 11, name: "Jaguar", logo: "/assets/car-models/Jaguar.webp", country: "UK" },
   { id: 12, name: "Jeep", logo: "/assets/car-models/Jeep.svg", country: "USA" },
   { id: 13, name: "Kia", logo: "/assets/car-models/Kia.svg", country: "South Korea" },
   { id: 14, name: "Land Rover", logo: "/assets/car-models/Land_Rover.svg", country: "UK" },

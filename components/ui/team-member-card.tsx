@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, User, AlertTriangle } from "lucide-react";
 import { GlowCard } from "@/components/ui/glow-card";
@@ -108,24 +108,16 @@ export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
 
             {/* Image */}
             <div className="relative aspect-[3/4] overflow-hidden">
-              {imgError ? (
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-slate-900">
-                  <div className="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center">
-                    <User className="w-8 h-8 text-slate-500" />
-                  </div>
-                  <p className="text-slate-500 text-sm">{imageErrorLabel}</p>
-                </div>
-              ) : (
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={864}
-                  height={1237}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 420px"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                  onError={() => setImgError(true)}
-                />
-              )}
+              <OptimizedImage
+                src={member.image}
+                alt={member.name}
+                width={864}
+                height={1237}
+                fallbackIcon="service"
+                fallbackText={imageErrorLabel || member.name}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 420px"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent pointer-events-none" />
               <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950/90 to-transparent pointer-events-none" />
             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { useTranslations } from "next-intl";
 import { ScrollReveal } from "../animations/scroll-reveal";
 import { GlowCard } from "@/components/ui/glow-card";
@@ -36,13 +36,16 @@ export const Workshop = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-blue-500/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700" />
                 <div className="relative rounded-3xl overflow-hidden border border-slate-700/50 shadow-glass">
                   <div className="relative w-full aspect-[4/3]">
-                    <Image
+                    <OptimizedImage
                       src="/assets/components/auto-diagnostics.avif"
                       alt="Mallouka Motors Workshop"
                       fill
+                      fallbackIcon="service"
+                      fallbackText="Mallouka Motors Workshop"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
+                  </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
 
                     <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -55,7 +58,6 @@ export const Workshop = () => {
                     </div>
                   </div>
                 </div>
-              </div>
             </ScrollReveal>
 
             <ScrollReveal variant="fadeInRight" delay={0.2}>

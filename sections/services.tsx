@@ -33,15 +33,23 @@ const validateServicesData = (
     }
     try {
       const icon = Icons[service.icon as keyof typeof Icons];
-      if (!icon || typeof icon !== "function") {
+      // lucide-react exports are React.forwardRef objects (typeof === "object")
+      // or plain functions — both are valid renderable components.
+      const isRenderable =
+        icon != null &&
+        (typeof icon === "function" ||
+          (typeof icon === "object" && "$$typeof" in (icon as object)));
+      if (!isRenderable) {
         errors.push(
           `Service ${service.id}: icon "${service.icon}" not found in lucide-react`
         );
+        return false;
       }
     } catch {
       errors.push(
         `Service ${service.id}: failed to resolve icon "${service.icon}"`
       );
+      return false;
     }
     return true;
   });

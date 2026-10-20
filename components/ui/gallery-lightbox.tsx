@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, AlertTriangle } from "lucide-react";
 import type { GalleryItem } from "@/data/gallery";
@@ -129,12 +129,13 @@ export const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
             className="rounded-2xl w-full max-h-[85vh] bg-slate-900"
           />
         ) : (
-          <Image
+          <OptimizedImage
             src={current.src}
             alt={current.alt}
             width={1600}
             height={1200}
-            onError={() => setMediaError(true)}
+            fallbackIcon="gear"
+            fallbackText={current.alt}
             className="rounded-2xl w-full h-auto max-h-[85vh] object-contain"
           />
         )}

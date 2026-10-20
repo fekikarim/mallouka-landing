@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInDown } from "../animations/variants";
@@ -96,10 +96,12 @@ export const Hero = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/10 to-transparent rounded-full blur-3xl" />
             <div className="relative w-full h-[400px] lg:h-full group">
-              <Image
+              <OptimizedImage
                 src="/assets/components/auto-service.avif"
                 alt="Auto Service"
                 fill
+                fallbackIcon="service"
+                fallbackText="Mallouka Motors Auto Service"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 fetchPriority="high"
                 className="object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
