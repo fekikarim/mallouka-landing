@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { MallloukaLogoIcon } from "@/components/ui/mallouka-logo-icon";
+
 
 export const Navbar = () => {
   const t = useTranslations("nav");
@@ -63,14 +63,25 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center relative group">
-            <div className="absolute inset-0 bg-primary-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            <MallloukaLogoIcon
-              color="#47a7e3"
-              className="h-12 w-auto relative z-10 drop-shadow-[0_0_12px_rgba(71,167,227,0.5)] transition-all duration-300 group-hover:drop-shadow-[0_0_18px_rgba(71,167,227,0.8)]"
-              aria-label="Mallouka Motors"
+          <a href="#hero" className="flex items-center relative group" aria-label="Mallouka Motors — Accueil">
+            <div className="absolute inset-0 bg-primary-500/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/logo/mallouka-motors-logo-transparent.svg"
+              alt="Mallouka Motors"
+              width={140}
+              height={48}
+              style={{ aspectRatio: "140 / 48" }}
+              loading="eager"
+              decoding="async"
+              className="h-12 w-auto object-contain relative z-10
+                [filter:brightness(0)_saturate(100%)_invert(60%)_sepia(75%)_saturate(400%)_hue-rotate(175deg)_brightness(1.1)]
+                drop-shadow-[0_0_10px_rgba(71,167,227,0.4)]
+                transition-all duration-300
+                group-hover:drop-shadow-[0_0_18px_rgba(71,167,227,0.75)]
+                group-hover:[filter:brightness(0)_saturate(100%)_invert(60%)_sepia(75%)_saturate(500%)_hue-rotate(175deg)_brightness(1.2)]"
             />
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
