@@ -19,6 +19,7 @@ implementation_plan.md
 
 # misc
 .DS_Store
+._*
 *.pem
 
 # debug
