@@ -115,9 +115,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     }
   };
 
-  // Preserve container aspect ratio when skeleton is enabled so layout never collapses
+  // Preserve container aspect ratio so layout never collapses (prevents CLS)
   const containerStyle: React.CSSProperties =
-    !fill && width && height && showSkeleton
+    !fill && width && height
       ? { aspectRatio: `${width} / ${height}` }
       : {};
 
@@ -175,6 +175,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           height={fill ? undefined : height}
           priority={priority}
           unoptimized={unoptimized ?? (useDirectFallback || isSvg)}
+          style={{
+            ...(!fill && width && height ? { aspectRatio: `${width} / ${height}` } : {}),
+            ...rest.style,
+          }}
           className={`${className} transition-opacity duration-300 ${
             isLoading ? "opacity-0" : hasCustomOpacity ? "" : "opacity-100"
           }`}

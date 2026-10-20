@@ -2,6 +2,21 @@ const createNextIntlPlugin = require('next-intl/plugin');
 
 const withNextIntl = createNextIntlPlugin('./app/i18n.ts');
 
+// Modern Content Security Policy with unsafe-eval for Next.js runtime & Fast Refresh
+const ContentSecurityPolicy = `
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' https: blob:;
+  style-src 'self' 'unsafe-inline' https:;
+  img-src 'self' blob: data: https:;
+  font-src 'self' data: https:;
+  media-src 'self' blob: data:;
+  connect-src 'self' https: ws: wss:;
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+  frame-ancestors 'self';
+`.replace(/\s{2,}/g, ' ').trim();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compress: true,
@@ -9,7 +24,6 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: 'https',
@@ -26,6 +40,31 @@ const nextConfig = {
   },
   async headers() {
     return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: ContentSecurityPolicy,
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+        ],
+      },
       {
         source: '/(service-worker|sw).js',
         headers: [
@@ -61,3 +100,4 @@ const nextConfig = {
 };
 
 module.exports = withNextIntl(nextConfig);
+

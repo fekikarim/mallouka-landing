@@ -8,10 +8,9 @@ import { GlowOrb } from "@/components/ui/glow-orb";
 
 interface BrandItemProps {
   brand: (typeof brandsData)[0];
-  priority?: boolean;
 }
 
-const BrandLogo: React.FC<BrandItemProps> = ({ brand, priority = false }) => {
+const BrandLogo: React.FC<BrandItemProps> = ({ brand }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement | null>(null);
@@ -37,11 +36,12 @@ const BrandLogo: React.FC<BrandItemProps> = ({ brand, priority = false }) => {
       alt={brand.name}
       width={160}
       height={70}
-      loading={priority ? "eager" : "lazy"}
+      loading="eager"
       decoding="async"
+      style={{ aspectRatio: "160 / 70" }}
       onLoad={() => setIsLoaded(true)}
       onError={() => setHasError(true)}
-      className={`max-w-[160px] max-h-[70px] w-auto h-auto object-contain brightness-0 invert transition-all duration-500 filter ${
+      className={`max-w-[160px] max-h-[70px] w-auto h-auto aspect-[16/7] object-contain brightness-0 invert transition-all duration-500 filter ${
         isLoaded
           ? "opacity-50 group-hover/brand:opacity-100 group-hover/brand:drop-shadow-[0_0_18px_rgba(255,255,255,0.65)]"
           : "opacity-0"
@@ -75,7 +75,7 @@ export const Brands = () => {
               key={`${brand.id}-${index}`}
               className="inline-flex items-center justify-center w-52 h-24 mx-8 group/brand cursor-pointer select-none transition-transform duration-500 hover:scale-110"
             >
-              <BrandLogo brand={brand} priority={index < 8} />
+              <BrandLogo brand={brand} />
             </div>
           ))}
         </div>
