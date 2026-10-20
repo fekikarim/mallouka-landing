@@ -20,8 +20,8 @@ export const companyData = {
     },
   ],
   socialMedia: {
-    facebook: "https://www.facebook.com/profile.php?id=61575520461848",
-    instagram: "https://www.instagram.com/allo.casse.auto.tn/",
+    facebook: "https://www.facebook.com/Mallouka.motors",
+    instagram: "https://www.instagram.com/Mallouka.motors/",
     linkedin: "https://www.linkedin.com/company/mallouka-motors",
     tiktok: "https://www.tiktok.com/@allo.casse.auto.tn",
   },

@@ -34,7 +34,7 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Image
-              src="/assets/logo/mallouka_motors_logo.svg"
+              src="/assets/logo/mallouka-motors-logo-transparent.svg"
               alt="Mallouka Motors"
               width={180}
               height={50}

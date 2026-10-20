@@ -29,4 +29,4 @@ export const OG_LOCALE_MAP: Record<SupportedLocale, string> = {
   ar: "ar_TN",
 };
 
-export const APP_ICON_PATH = "/assets/logo/mallouka_motors_logo.svg";
+export const APP_ICON_PATH = "/assets/logo/mallouka-motors-logo.png";

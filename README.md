@@ -1,215 +1,300 @@
-# Mallouka Motors Landing Page
+<div align="center">
 
-A production-ready, premium corporate landing page for Mallouka Motors (formerly Allo Casse Auto), built with Next.js 16, React 19, TypeScript, and TailwindCSS.
+  <img src="public/assets/logo/mallouka-motors-logo-transparent.svg" alt="Mallouka Motors Logo" width="160" height="160" />
 
-## Features
+  # Mallouka Motors Official Landing Page
+  
+  **Tunisia's Trusted Automotive Specialists Since 2003**  
+  *Known for years as **Allo Casse Auto***
 
-- **Multi-language Support**: English, French, and Arabic with RTL support
-- **16 Sections**: Hero, Brands, Statistics, About, Timeline, Services, Process, Why Choose Us, Workshop, Gallery, Testimonials, FAQ, Contact, Maps, and Footer
-- **Premium Design**: Blue theme (#2d96da) matching the official logo
-- **Animations**: Framer Motion for smooth scroll reveal and hover effects
-- **Responsive Design**: Mobile-first approach with breakpoints for all screen sizes
-- **SEO Optimized**: Metadata, robots.txt, sitemap, and structured data
-- **Accessibility**: WCAG compliance with semantic HTML and ARIA labels
+  <p align="center">
+    <a href="https://mallouka-motors.netlify.app" target="_blank">
+      <img src="https://img.shields.io/badge/Production-mallouka--motors.netlify.app-2d96da?style=for-the-badge&logo=netlify&logoColor=white" alt="Production Ready" />
+    </a>
+    <a href="https://nextjs.org" target="_blank">
+      <img src="https://img.shields.io/badge/Next.js-15.3.4-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+    </a>
+    <a href="https://react.dev" target="_blank">
+      <img src="https://img.shields.io/badge/React-19.0.0-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
+    </a>
+    <a href="https://www.typescriptlang.org" target="_blank">
+      <img src="https://img.shields.io/badge/TypeScript-5.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    </a>
+    <a href="https://tailwindcss.com" target="_blank">
+      <img src="https://img.shields.io/badge/TailwindCSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+    </a>
+  </p>
 
-## Tech Stack
+  <p align="center">
+    <strong>Languages Supported:</strong> English (<code>/en</code>) • Français (<code>/fr</code>) • العربية (<code>/ar</code> with native RTL)
+  </p>
 
-- **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript
-- **Styling**: TailwindCSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Internationalization**: next-intl
-- **Forms**: React Hook Form + Zod
-- **Carousels**: Embla Carousel
+  <p align="center">
+    <a href="#-project-overview">Project Overview</a> •
+    <a href="#-branding--heritage">Branding & Heritage</a> •
+    <a href="#-core-features">Features</a> •
+    <a href="#-technology-stack">Tech Stack</a> •
+    <a href="#-architecture--directory-structure">Architecture</a> •
+    <a href="#-project-sections">Sections</a> •
+    <a href="#-enterprise-contact--branches">Contact & Branches</a> •
+    <a href="#-author--credits">Author</a>
+  </p>
 
-## Project Structure
+</div>
+
+---
+
+## 🌟 Executive Summary
+
+**Mallouka Motors** (formerly founded as *Marsa Casse* in 2003 and long recognized across Tunisia and North Africa as *Allo Casse Auto*) is a premier automotive enterprise specializing in certified imported engines, gearboxes, electrical components, and automotive spare parts imported directly from European partners (France, Belgium, Germany, Italy, and Spain).
+
+This repository contains the **official corporate landing page and digital showroom** for Mallouka Motors. Engineered with **Next.js 15+ App Router**, **React 19**, **TypeScript**, and **Tailwind CSS**, the platform delivers an ultra-high performance, multi-lingual, and fully accessible web experience engineered to international corporate standards.
+
+- 🌐 **Official Production URL**: [https://mallouka-motors.netlify.app](https://mallouka-motors.netlify.app)
+- 🏢 **Official Brand Name**: Mallouka Motors
+- 📜 **Historical Public Heritage**: Allo Casse Auto (*"Known for years as Allo Casse Auto"*)
+- 📍 **Headquarters**: Bhar Lazreg, La Marsa, Tunis, Tunisia
+
+---
+
+## 🏢 Branding & Heritage Strategy
+
+Over more than two decades, the enterprise evolved across three key milestones:
+
+```mermaid
+timeline
+    title Mallouka Motors Enterprise Evolution
+    2003 : Marsa Casse : Founded in La Marsa, pioneering imported automotive parts & mechanical repairs
+    2012 : Allo Casse Auto : Major nationwide expansion & iconic brand identity recognized by tens of thousands
+    2020 : Mallouka Motors : Modern corporate restructuring, international logistics & multi-branch expansion
+    Present : Unified Digital Identity : Official Mallouka Motors brand preserving full Allo Casse Auto heritage
+```
+
+### Brand Architecture & Design Tokens
+The digital presence reflects the company's official corporate identity created specifically for this project:
+
+| Design Dimension | Specification | Usage Details |
+| :--- | :--- | :--- |
+| **Primary Hue** | `#2d96da` (Pantone Process Cyan tint) | Brand logo, active CTAs, glow orbs, focus rings, link hovers |
+| **Secondary Hue** | `#1e293b` (Deep Slate Navy) | Corporate backgrounds, typography contrast, footer surfaces |
+| **Accent Hue** | `#f59e0b` (Amber Gold) | Highlights, rating stars, badges, milestone badges |
+| **Logo Concept** | High-precision vector emblem | Combines mechanical cogwheel gear with automotive silhouette |
+| **Typography** | Dynamic system typography | High-readability sans-serif optimized for LTR and Arabic script |
+
+---
+
+## ⚡ Core Features & Technical Highlights
+
+### 1. Seamless Multi-Language Architecture (i18n & RTL)
+- Built on **`next-intl`** with zero-layout-shift routing (`/en`, `/fr`, `/ar`).
+- Full Bidirectional Support: Dynamically sets document attributes (`dir="rtl" lang="ar"`) ensuring natural right-to-left flow for Arabic users.
+- Clean language toggle switch in the sticky navigation bar preserving current page scroll coordinates.
+
+### 2. High-Performance Media & Asset Delivery
+- Next.js Image Optimization utilizing modern **AVIF** and **WebP** formats with responsive srcSets.
+- Embedded local MP4 and MOV video showcases optimized with custom posters and lightweight controls.
+- Dynamic lightbox modal for visual examination of imported engines, showroom floor, and mechanical equipment.
+
+### 3. Enterprise SEO & Social Graph (CWV-Optimized)
+- Complete JSON-LD Structured Data (`schema.org/AutoRepair`) for enhanced Google Rich Snippets.
+- Canonical URLs, dynamically generated `sitemap.xml`, and strict `robots.txt` configuration.
+- OpenGraph and Twitter Cards metadata pre-configured with multi-lingual fallbacks.
+
+### 4. Interactive & Accessible UI System
+- Smooth scroll-triggered reveal animations powered by **Framer Motion**.
+- Embla Carousel touch-enabled sliders for brand partnerships and automotive models.
+- Accessible form validation driven by **React Hook Form** + **Zod**.
+- Interactive Google Maps embed for both enterprise branches in La Marsa and Tunis.
+
+---
+
+## 🛠️ Technology Stack
+
+```mermaid
+graph TD
+    Client[Web Browser / Client] --> CDN[Netlify Global Edge CDN]
+    CDN --> NextApp[Next.js 15.3.4 App Router]
+    
+    subgraph Frontend Architecture
+        NextApp --> I18n[next-intl Routing: en / fr / ar]
+        NextApp --> Sections[15 Corporate Modular Sections]
+        NextApp --> UI[Tailwind CSS + Framer Motion Components]
+        NextApp --> SEO[Schema.org JSON-LD + OpenGraph Generator]
+    end
+
+    subgraph Data & Assets Layer
+        Sections --> DataStore[Structured TypeScript Data Stores]
+        Sections --> MediaAssets[AVIF / WebP / SVG Asset Pipeline]
+    end
+```
+
+| Layer | Technology | Version | Purpose |
+| :--- | :--- | :--- | :--- |
+| **Core Framework** | [Next.js](https://nextjs.org/) (App Router) | `^15.3.4` | Server-side rendering, static site generation, routing |
+| **UI Library** | [React](https://react.dev/) | `^19.0.0` | Declarative component architecture |
+| **Type Safety** | [TypeScript](https://www.typescriptlang.org/) | `^5.3.0` | Strict static typing across components and data |
+| **Styling** | [Tailwind CSS](https://tailwindcss.com/) | `^3.4.0` | Utility-first responsive styling and design tokens |
+| **Motion** | [Framer Motion](https://www.framer.com/motion/) | `^11.0.0` | Orchestrated entrance animations and interaction states |
+| **Internationalization** | [next-intl](https://next-intl-docs.vercel.app/) | `^3.0.0` | Multi-language translation dictionaries & middleware |
+| **Form Handling** | [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) | `^7.50` / `^3.22` | Schema-based client form validation |
+| **Carousel Engine** | [Embla Carousel](https://www.embla-carousel.com/) | `^8.0.0` | Lightweight touch & mouse drag automotive brand slider |
+| **Icons** | [Lucide React](https://lucide.dev/) | `^0.468.0` | Crisp modern vector iconography |
+
+---
+
+## 📂 Architecture & Directory Structure
 
 ```
 mallouka-landing/
-├── app/
-│   ├── [locale]/
-│   │   ├── layout.tsx      # Locale-specific layout with SEO
-│   │   └── page.tsx        # Home page with all sections
-│   ├── globals.css         # Global styles
-│   ├── layout.tsx          # Root layout (redirects to /en)
-│   └── sitemap.ts         # Sitemap generation
-├── assets/
-│   ├── company/            # Company images and videos
-│   └── logo/               # Logo files
-├── components/
+├── animations/                 # Framer motion orchestration variants
+│   ├── scroll-reveal.tsx       # Reusable viewport scroll animation wrapper
+│   └── variants.ts             # Easing, staggered fades, and hover presets
+├── app/                        # Next.js App Router
+│   ├── [locale]/               # Dynamic localized route group
+│   │   ├── error.tsx           # Localized error boundary
+│   │   ├── layout.tsx          # Localized root layout (SEO metadata & Schema.org)
+│   │   ├── loading.tsx         # Skeleton loading states
+│   │   ├── not-found.tsx       # Localized 404 handler
+│   │   └── page.tsx            # Composition entry for all 15 sections
+│   ├── globals.css             # Tailwind layers, gradients, and custom scrollbars
+│   ├── i18n.ts                 # Request configuration for next-intl
+│   ├── layout.tsx              # Root fallback layout with language redirect
+│   └── sitemap.ts              # Dynamic XML sitemap generator
+├── components/                 # Reusable Atomic & Layout Components
 │   ├── layout/
-│   │   ├── navbar.tsx      # Navigation with language switcher
-│   │   └── footer.tsx      # Footer with company info
-│   └── ui/
-│       ├── button.tsx      # Button component
-│       ├── card.tsx        # Card component
-│       ├── container.tsx   # Container component
-│       ├── icon-wrapper.tsx # Icon wrapper component
-│       ├── input.tsx       # Input and textarea components
-│       ├── section.tsx     # Section wrapper component
-│       └── typography.tsx # Typography components
-├── data/
-│   ├── company.ts          # Company information
-│   ├── services.ts        # Services data
-│   ├── brands.ts           # Automotive brands
-│   ├── testimonials.ts     # Customer reviews
-│   ├── faqs.ts             # FAQ data
-│   ├── gallery.ts          # Gallery data
-│   ├── statistics.ts       # Company statistics
-│   └── timeline.ts         # Company history
-├── messages/
-│   ├── en.json             # English translations
-│   ├── fr.json             # French translations
-│   └── ar.json             # Arabic translations
-├── sections/
-│   ├── hero.tsx            # Hero section
-│   ├── brands.tsx          # Brands carousel
-│   ├── statistics.tsx      # Statistics with animated counters
-│   ├── about.tsx           # About company
-│   ├── timeline.tsx        # Company timeline
-│   ├── services.tsx        # Services section
-│   ├── process.tsx         # Engine import process
-│   ├── why-choose.tsx      # Why choose us
-│   ├── workshop.tsx        # Mechanical workshop
-│   ├── gallery.tsx         # Gallery with lightbox
-│   ├── testimonials.tsx    # Testimonials
-│   ├── faq.tsx             # FAQ accordion
-│   ├── contact.tsx         # Contact form
-│   └── maps.tsx            # Google Maps
-├── animations/
-│   ├── variants.ts         # Framer Motion variants
-│   └── scroll-reveal.tsx   # Scroll reveal component
-├── lib/
-│   └── utils.ts            # Utility functions
-├── i18n.ts                 # next-intl configuration
-├── middleware.ts           # Next.js middleware for i18n
-├── next.config.js          # Next.js configuration
-├── tailwind.config.ts      # TailwindCSS configuration
-├── tsconfig.json           # TypeScript configuration
-└── package.json            # Dependencies
+│   │   ├── navbar.tsx          # Responsive navbar with language switcher
+│   │   └── footer.tsx          # Corporate footer with branch details & credit
+│   └── ui/                     # UI components (Button, GlowCard, Modal, etc.)
+├── data/                       # Single-Source-Of-Truth TypeScript entities
+│   ├── brands.ts               # 25+ automotive OEM manufacturer data
+│   ├── company.ts              # Enterprise metadata, branches, contact points
+│   ├── faqs.ts                 # Categorized technical & purchasing FAQs
+│   ├── gallery.ts              # Showroom media records, tags, and posters
+│   ├── services.ts             # Engine import, diagnostics, and workshop services
+│   ├── statistics.ts           # Operational milestone numbers & metrics
+│   ├── team.ts                 # Executive leadership profiles
+│   ├── testimonials.ts         # Verified domestic & international customer reviews
+│   └── timeline.ts             # 2003 -> Present corporate historical records
+├── lib/                        # Core utilities & SEO builders
+│   ├── seo/                    # OpenGraph, metadata schemas, and canonical builders
+│   └── utils.ts                # Tailwind class merge (clsx + twMerge)
+├── messages/                   # Translation dictionaries
+│   ├── ar.json                 # Arabic localization (RTL)
+│   ├── en.json                 # English localization (LTR)
+│   └── fr.json                 # French localization (LTR)
+├── public/                     # Static production assets
+│   ├── assets/
+│   │   ├── car-models/         # OEM brand vector logos (BMW, Mercedes, Audi, etc.)
+│   │   ├── company/            # Showroom photography and MP4 video tours
+│   │   ├── logo/               # Vector SVG logo & Allo Casse Auto historical asset
+│   │   └── team/               # Executive leadership portraits
+│   ├── og-image.png            # 1200x630 Social Graph banner
+│   └── robots.txt              # Production web crawler directives
+├── sections/                   # 15 Self-Contained Landing Page Sections
+│   ├── hero.tsx                # Hero banner with primary CTAs
+│   ├── brands.tsx              # Infinite scrolling marquee of car manufacturers
+│   ├── statistics.tsx          # Animated number counters
+│   ├── about.tsx               # Enterprise vision, mission, and values
+│   ├── timeline.tsx            # Interactive historical timeline (2003-Present)
+│   ├── services.tsx            # Comprehensive breakdown of company capabilities
+│   ├── process.tsx             # 4-stage engine sourcing & import lifecycle
+│   ├── why-choose.tsx          # 8 core enterprise value propositions
+│   ├── workshop.tsx            # Dedicated mechanical workshop showcase
+│   ├── gallery.tsx             # Filterable photo & video showroom lightbox
+│   ├── testimonials.tsx        # International client reviews (Tunisia & France)
+│   ├── team.tsx                # Leadership presentation (Owner & GM)
+│   ├── faq.tsx                 # Searchable accordion FAQ
+│   ├── contact.tsx             # Direct inquiry form with validation
+│   └── maps.tsx                # Dual interactive Google Maps embeds
+├── middleware.ts               # Locale negotiation and redirect middleware
+├── next.config.js              # Image remote patterns, security headers & i18n
+├── tailwind.config.ts          # Custom color palettes, shadows, and animations
+└── tsconfig.json               # TypeScript strict compiler options
 ```
 
-## Installation
+---
 
-1. Clone the repository:
+## 📑 Detailed Page Sections Breakdown
+
+The landing page features **15 meticulously crafted sections**:
+
+1. **Hero Section (`sections/hero.tsx`)**: High-impact banner introducing Mallouka Motors with immediate recognition of the historical Allo Casse Auto identity, direct WhatsApp CTA, and quote request button.
+2. **Brands Marquee (`sections/brands.tsx`)**: Infinite fluid animation displaying 25+ major automotive OEM brand marks (Mercedes-Benz, BMW, Audi, Volkswagen, Renault, Peugeot, Toyota, etc.).
+3. **Key Statistics (`sections/statistics.tsx`)**: Dynamic counting counters showcasing 20+ years of operation, 2,500+ engines imported, 10,000+ satisfied clients, and European supply routes.
+4. **Corporate About (`sections/about.tsx`)**: Articulates the company’s vision, founding principles, European sourcing standards, and core commitment to quality.
+5. **Interactive Timeline (`sections/timeline.tsx`)**: Chronological visual guide showing the transition from *Marsa Casse (2003)* $\rightarrow$ *Allo Casse Auto (2012)* $\rightarrow$ *Mallouka Motors (2020–Present)*.
+6. **Services Suite (`sections/services.tsx`)**: Detailed cards covering engine sales, manual/automatic gearboxes, electronic control modules (ECUs), and spare parts.
+7. **Importation Process (`sections/process.tsx`)**: 4-step transparency workflow: Sourcing in Europe $\rightarrow$ Technical Testing $\rightarrow$ Maritime Logistics $\rightarrow$ Warranty & Client Delivery.
+8. **Why Choose Us (`sections/why-choose.tsx`)**: Competitive advantages including guaranteed compression tests, genuine provenance, and warranty coverage.
+9. **Mechanical Workshop (`sections/workshop.tsx`)**: Presentation of the specialized mechanical mounting and maintenance workshop located in El Bahr, Tunis.
+10. **Multimedia Gallery (`sections/gallery.tsx`)**: Filterable media grid featuring interior showroom photography, exterior warehouse footage, and high-definition walkthrough videos.
+11. **Testimonials Carousel (`sections/testimonials.tsx`)**: Real verified reviews from long-time customers and business partners across Tunisia and France (Toulouse, Paris, Sfax, Tunis).
+12. **Executive Leadership (`sections/team.tsx`)**: Professional profiles of founder **Majdi Feki** and general manager **Rochdi Feki** with direct communication links.
+13. **Frequently Asked Questions (`sections/faq.tsx`)**: Interactive accordion covering engine warranties, delivery timelines, and compatibility checks.
+14. **Contact & Quote Form (`sections/contact.tsx`)**: Validated contact form paired with real-time telephone and WhatsApp quick-dial capabilities.
+15. **Branch Locations (`sections/maps.tsx`)**: Embedded Google Maps with pinpoints for both operational branches in La Marsa and Tunis.
+
+---
+
+## 🚀 Getting Started Locally
+
+### Prerequisites
+- **Node.js**: `v18.18.0` or higher (Node 20+ recommended)
+- **npm** or **pnpm** installed on your system
+
+### Installation & Execution
 ```bash
-git clone <repository-url>
+# 1. Clone the repository
+git clone https://github.com/fekikarim/mallouka-landing.git
 cd mallouka-landing
-```
 
-2. Install dependencies:
-```bash
+# 2. Install dependencies
 npm install
-```
 
-## Development
-
-Run the development server:
-```bash
+# 3. Launch development server
 npm run dev
+
+# 4. Open in browser
+# Accessible at: http://localhost:3000 (auto-redirects to /fr or /en)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Build
-
-Build for production:
+### Production Build
 ```bash
+# Create optimized production build
 npm run build
+
+# Start local production runtime
+npm run start
 ```
 
-## Start Production Server
+---
 
-Start the production server:
-```bash
-npm start
-```
+## 🏢 Enterprise Contact & Locations
 
-## Language Switching
+| Location / Channel | Information | Direct Action |
+| :--- | :--- | :--- |
+| **Branch 1: Spare Parts & Engines** | Rue Ibn El Jazzar, Bhar Lazreg, La Marsa, Tunis 2046 | [Open in Google Maps](https://maps.app.goo.gl/Hrv1fa1jRtX3vc4y9) |
+| **Branch 2: Mechanical Workshop** | Rue Jaber Ibn Hayen, El Bahr, Tunis 2070 | [Open in Google Maps](https://maps.app.goo.gl/6d4xHMM6T7qcaji78) |
+| **Customer Support Phone** | `+216 24 270 888` | [Call Support](tel:+21624270888) |
+| **Direct WhatsApp Inquiries** | `+216 44 511 011` | [Chat on WhatsApp](https://wa.me/21644511011) |
+| **Official Email** | `malloukamotors21@gmail.com` | [Send Email](mailto:malloukamotors21@gmail.com) |
+| **LinkedIn Company** | `company/mallouka-motors` | [View LinkedIn](https://www.linkedin.com/company/mallouka-motors) |
+| **Facebook Official** | `@Mallouka.motors` | [View Facebook](https://www.facebook.com/Mallouka.motors) |
+| **Instagram Official** | `@Mallouka.motors` | [View Instagram](https://www.instagram.com/Mallouka.motors/) |
 
-The site supports three languages:
-- English: `/en`
-- French: `/fr`
-- Arabic: `/ar` (with RTL support)
+---
 
-Use the language switcher in the navbar to change languages.
+## 👤 Author & Credits
 
-## Sections
+This project was conceived, designed, and engineered exclusively by **Karim Feki** as the official digital flagship for **Mallouka Motors Entreprise**.
 
-1. **Hero**: Company introduction with CTAs
-2. **Brands**: 25+ automotive brand logos
-3. **Statistics**: Animated counters (23+ years, 200+ engines, etc.)
-4. **About**: Company description, mission, vision, values
-5. **Timeline**: Company history (2003 → 2012 → 2020)
-6. **Services**: 10+ service cards with icons
-7. **Process**: Engine import process steps
-8. **Why Choose Us**: 8 key differentiators
-9. **Workshop**: Mechanical workshop information
-10. **Gallery**: Image/video gallery with lightbox
-11. **Testimonials**: Customer reviews
-12. **FAQ**: Accordion with common questions
-13. **Contact**: Contact form with validation
-14. **Maps**: Google Maps for both branches
-15. **Footer**: Company info, links, social media
+| Avatar | Name | Role | Links |
+| :---: | :--- | :--- | :--- |
+| <img src="https://github.com/fekikarim.png" width="48" height="48" style="border-radius:50%"> | **Karim Feki** | Full Project Conception, End-to-End Development, Architecture, Corporate Branding & Logo Creation | [GitHub](https://github.com/fekikarim) • [LinkedIn](https://www.linkedin.com/in/karimfeki) • [Portfolio](https://karimfeki.is-a.dev) |
 
-## Color Theme
+---
 
-Primary color: `#2d96da` (Blue)
+## 📄 License & Rights
 
-The theme includes:
-- Primary: Blue (#2d96da)
-- Secondary: Dark slate (#1e293b)
-- Accent: Amber (#f59e0b)
-- Neutral: Gray scale
-
-## SEO
-
-The site includes:
-- Dynamic metadata for each locale
-- OpenGraph tags
-- Twitter card tags
-- Structured data (JSON-LD) for Local Business
-- robots.txt
-- sitemap.xml
-
-## Accessibility
-
-- Semantic HTML elements
-- ARIA labels for interactive elements
-- Keyboard navigation support
-- Focus indicators
-- Color contrast ratios (4.5:1 minimum)
-- Alt text for images
-- Screen reader support
-
-## Performance
-
-- Next.js Image optimization
-- Code splitting with dynamic imports
-- Static rendering where appropriate
-- Font optimization with next/font
-- Lazy loading for animations
-
-## Future Improvements
-
-- Add contact form backend integration
-- Implement real WhatsApp integration
-- Add more gallery images
-- Integrate real Google Maps with actual coordinates
-- Add blog/news section
-- Implement customer account system
-- Add online quote request system
-- Integrate payment gateway for online orders
-
-## Contact
-
-- **Email**: malloukamotors21@gmail.com
-- **Phone**: +216 24 270 888
-- **WhatsApp**: +216 44 511 011
-- **Branch 1**: Rue Ibn El Jazzar, Bhar Lazreg, La Marsa
-- **Branch 2**: Rue Jaber Ibn Hayen, Tunis 2070
-
-## License
-
-© 2024 Mallouka Motors. All rights reserved.
+Copyright © 2003–2026 **Mallouka Motors** (formerly *Allo Casse Auto*). All rights reserved.  
+All brand trademarks, vehicle logos, and corporate emblems displayed on this platform are the registered intellectual property of their respective manufacturer OEM entities.

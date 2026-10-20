@@ -65,12 +65,20 @@ export const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center relative group">
             <div className="absolute inset-0 bg-primary-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-            <Image
-              src="/assets/logo/mallouka_motors_logo.svg"
-              alt="Mallouka Motors"
-              width={180}
-              height={50}
-              className="h-12 w-auto relative z-10 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+            <div
+              className="h-12 w-44 relative z-10 bg-[#47a7e3] drop-shadow-[0_0_12px_rgba(71,167,227,0.6)]"
+              style={{
+                maskImage: 'url("/assets/logo/mallouka-motors-logo-transparent.svg")',
+                WebkitMaskImage: 'url("/assets/logo/mallouka-motors-logo-transparent.svg")',
+                maskRepeat: "no-repeat",
+                WebkitMaskRepeat: "no-repeat",
+                maskSize: "contain",
+                WebkitMaskSize: "contain",
+                maskPosition: "left center",
+                WebkitMaskPosition: "left center",
+              }}
+              aria-label="Mallouka Motors"
+              role="img"
             />
           </div>
 
